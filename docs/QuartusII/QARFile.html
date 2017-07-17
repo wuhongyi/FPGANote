@@ -1,0 +1,435 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>QAR文件 · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Quartus II
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="QARFile.html">
+            
+                <a href="QARFile.html">
+            
+                    
+                    QAR文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >QAR文件</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!-- QARFile.md --- 
+;; 
+;; Description: 
+;; Author: Hongyi Wu(吴鸿毅)
+;; Email: wuhongyi@qq.com 
+;; Created: 一 7月 17 22:48:35 2017 (+0800)
+;; Last-Updated: 一 7月 17 22:57:34 2017 (+0800)
+;;           By: Hongyi Wu(吴鸿毅)
+;;     Update #: 2
+;; URL: http://wuhongyi.cn -->
+
+
+<h1 id="qar-&#x6587;&#x4EF6;">QAR &#x6587;&#x4EF6;</h1><p>&#x4F7F;&#x7528; <strong>Quartus II</strong> &#x81EA;&#x5E26;&#x7684;&#x5DE5;&#x7A0B;&#x6587;&#x4EF6;&#x538B;&#x7F29;&#x529F;&#x80FD;&#x53EF;&#x4EE5;&#x7701;&#x53BB;&#x53D6;&#x820D;&#x6587;&#x4EF6;&#x7684;&#x9EBB;&#x70E6;&#x3002;&#x4F46;&#x662F; <strong>.qar</strong> &#x6587;&#x4EF6;&#x628A;&#x4F17;&#x591A;&#x6587;&#x4EF6;&#x538B;&#x7F29;&#x6210;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x53EA;&#x6709;&#x89E3;&#x538B;&#x7F29;&#x624D;&#x80FD;&#x83B7;&#x53D6;&#x5177;&#x4F53;&#x6587;&#x4EF6;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x7248;&#x672C;&#x63A7;&#x5236;&#x5DE5;&#x5177;&#xFF08;&#x5982;CVS&#xFF09;&#x7684;&#x8BDD;&#xFF0C;&#x5BF9; <strong>.qar</strong> &#x6587;&#x4EF6;&#x65E0;&#x6CD5;&#x8FDB;&#x884C;&#x7248;&#x672C;&#x6BD4;&#x8F83;&#x3002;&#x751A;&#x81F3;&#x5F53; <strong>.qar</strong> &#x6587;&#x4EF6;&#x53D7;&#x635F;&#x65F6;&#xFF0C;&#x90E8;&#x5206;&#x751A;&#x81F3;&#x5168;&#x90E8;&#x6587;&#x4EF6;&#x90FD;&#x65E0;&#x6CD5;&#x6062;&#x590D;&#x4E86;&#x3002;&#x800C;&#x4E14;&#xFF0C;&#x7F3A;&#x7701;&#x914D;&#x7F6E;&#x7684; <strong>.qar</strong> &#x6587;&#x4EF6;&#x4E5F;&#x5305;&#x542B;&#x4E86;&#x4E00;&#x4E9B;&#x975E;&#x5173;&#x952E;&#x6587;&#x4EF6;&#xFF0C;&#x5B58;&#x5728;&#x4E00;&#x5B9A;&#x7684;&#x5197;&#x4F59;&#x3002;</p><p>&#x89E3;&#x51B3;&#x8FD9;&#x4E00;&#x95EE;&#x9898;&#x7684;&#x5173;&#x952E;&#x5728;&#x4E8E;&#x5F04;&#x6E05;&#x6587;&#x4EF6;&#x6269;&#x5C55;&#x540D;&#x7684;&#x610F;&#x4E49;&#xFF0C;&#x660E;&#x660E;&#x767D;&#x767D;&#x5730;&#x63A7;&#x5236;&#x6587;&#x4EF6;&#x7684;&#x53D6;&#x820D;&#x3002;</p><p>The following file types are available for use in the Quartus II software:</p><pre><code>AHDL Include File
+.inc
+ATOM Netlist File
+.atm
+Block Design File
+.bdf
+Block Symbol File
+.bsf
+BSDL file
+.bsd
+Chain Description File
+.cdf
+Comma-Separated Value File
+.csv
+Component Declaration File
+.cmp
+Compressed Vector Waveform. File
+.cvwf
+Conversion Setup File
+.cof
+Cross-Reference File
+.xrf
+database files
+.cdb, .hdb, .rdb, .tdb
+DSP Block Region File
+.macr
+EDIF Input File
+.edf, .edif, .edn
+Global Clock File
+.gclk
+Graphic Design File
+.gdf
+HardCopy files
+.datasheet, .sdo, .tcl, .vo
+Hexadecimal (Intel-Format) File
+.hex
+Hexadecimal (Intel-Format) Output File
+.hexout
+HSPICE Simulation Deck File
+.sp
+HTML-Format Report File
+.htm
+I/O Pin State File
+.ips
+IBIS Output File
+.ibs
+In System Configuration File
+.isc
+Jam Byte Code File
+.jbc
+Jam File
+.jam
+JTAG Indirect Configuration File
+.jic
+Library Mapping File
+.lmf
+License File
+license.dat
+Logic Analyzer Interface File
+.lai
+Memory Initialization File
+.mif
+Memory Map File
+.map
+PartMiner edaXML-Format File
+.xml
+Pin-Out File
+.pin
+placement constraints file
+.apc
+Programmer Object File
+.pof
+programming files
+.cdf, .cof
+QMSG File
+.qmsg
+Quartus II Archive File
+.qar
+Quartus II Archive Log File
+.qarlog
+Quartus User-Defined Device File
+.qud
+Quartus II Default Settings File
+.qdf
+Quartus II Exported Partition File
+.qxp
+Quartus II Project File
+.qpf
+Quartus II Settings File
+.qsf
+Quartus II Workspace File
+.qws
+RAM Initialization File
+.rif
+Raw Binary File
+.rbf
+Raw Programming Data File
+.rpd
+Routing Constraints File
+.rcf
+Signal Activity File
+.saf
+SignalTap II File
+.stp
+Simulator Channel File
+.scf
+SRAM Object File
+.sof
+Standard Delay Format Output File
+.sdo
+Symbol File
+.sym
+Synopsys Design Constraints File
+.sdc
+Tab-Separated Value File
+.txt
+Tabular Text File
+.ttf
+Tcl Script. File
+.tcl
+Text Design File
+.tdf
+Text-Format Report File
+.rpt
+Text-Format Timing Summary File
+.tan.summary
+Timing Analysis Output File
+.tao
+Token File
+ted.tok
+Vector File
+.vec
+Vector Table Output File
+.tbl
+vector source files
+.tbl, .vwf, .vec
+Vector Waveform. File
+.vwf
+Verilog Design File
+.v, .vh, .verilog, .vlg
+Verilog Output File
+.vo
+Verilog Quartus Mapping File
+.vqm
+Verilog Test Bench File
+.vt
+Value Change Dump File
+.vcd
+version-compatible database files
+.atm, .hdbx, .rcf, .xml
+VHDL Design File
+.vhd, .vhdl
+VHDL Output File
+.vho
+VHDL Test Bench File
+.vht
+XML files
+.cof, .stp, .xml
+waveform. files
+.scf, .stp, .tbl, .vec, .vwf</code></pre>
+<p>&#x4E0A;&#x9762;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x4E94;&#x7C7B;&#xFF1A;</p><pre><code>1. &#x7F16;&#x8BD1;&#x5FC5;&#x9700;&#x7684;&#x6587;&#x4EF6;&#xFF1A;&#x8BBE;&#x8BA1;&#x6587;&#x4EF6;&#xFF08;.gdf&#x3001;.bdf&#x3001;EDIF&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x3001;.tdf&#x3001;verilog&#x8BBE;&#x8BA1;&#x6587;&#x4EF6;&#x3001;.vqm&#x3001;.vt&#x3001;VHDL&#x8BBE;&#x8BA1;&#x6587;&#x4EF6;&#x3001;.vht&#xFF09;&#x3001;&#x5B58;&#x50A8;&#x5668;&#x521D;&#x59CB;&#x5316;&#x6587;&#x4EF6;&#xFF08;.mif&#x3001;.rif&#x3001;.hex&#xFF09;&#x3001;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF08;.qsf&#x3001;.tcl&#xFF09;&#x3001;&#x5DE5;&#x7A0B;&#x6587;&#x4EF6;&#xFF08;.qpf&#xFF09;&#x3002;
+2. &#x7F16;&#x8BD1;&#x8FC7;&#x7A0B;&#x4E2D;&#x751F;&#x6210;&#x7684;&#x4E2D;&#x95F4;&#x6587;&#x4EF6;&#xFF08;.eqn&#x6587;&#x4EF6;&#x548C;db&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;&#xFF09;
+3. &#x7F16;&#x8BD1;&#x7ED3;&#x675F;&#x540E;&#x751F;&#x6210;&#x7684;&#x62A5;&#x544A;&#x6587;&#x4EF6;&#xFF08;.rpt&#x3001;.qsmg&#x7B49;&#xFF09;
+4. &#x6839;&#x636E;&#x4E2A;&#x4EBA;&#x4F7F;&#x7528;&#x4E60;&#x60EF;&#x751F;&#x6210;&#x7684;&#x754C;&#x9762;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF08;.qws&#x7B49;&#xFF09;
+5. &#x7F16;&#x7A0B;&#x6587;&#x4EF6;&#xFF08;.sof&#x3001;.pof&#x3001;.ttf&#x7B49;&#xFF09;</code></pre>
+<p>&#x4E0A;&#x9762;&#x5206;&#x7C7B;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x7C7B;&#x6587;&#x4EF6;&#x662F;&#x4E00;&#x5B9A;&#x8981;&#x4FDD;&#x7559;&#x7684;&#xFF1B;&#x7B2C;&#x4E8C;&#x7C7B;&#x6587;&#x4EF6;&#x5728;&#x7F16;&#x8BD1;&#x8FC7;&#x7A0B;&#x4E2D;&#x4F1A;&#x6839;&#x636E;&#x7B2C;&#x4E00;&#x7C7B;&#x6587;&#x4EF6;&#x751F;&#x6210;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x4FDD;&#x7559;&#xFF1B;&#x7B2C;&#x4E09;&#x7C7B;&#x6587;&#x4EF6;&#x4F1A;&#x6839;&#x636E;&#x7B2C;&#x4E00;&#x7C7B;&#x6587;&#x4EF6;&#x7684;&#x6539;&#x53D8;&#x800C;&#x53D8;&#x5316;&#xFF0C;&#x53CD;&#x6620;&#x4E86;&#x7F16;&#x8BD1;&#x540E;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x53EF;&#x4EE5;&#x89C6;&#x9700;&#x8981;&#x4FDD;&#x7559;&#xFF1B;&#x7B2C;&#x56DB;&#x7C7B;&#x6587;&#x4EF6;&#x4FDD;&#x5B58;&#x4E86;&#x4E2A;&#x4EBA;&#x4F7F;&#x7528;&#x504F;&#x597D;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x89C6;&#x9700;&#x8981;&#x4FDD;&#x7559;&#xFF1B;&#x7B2C;&#x4E94;&#x7C7B;&#x6587;&#x4EF6;&#x662F;&#x7F16;&#x8BD1;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x4E00;&#x5B9A;&#x8981;&#x4FDD;&#x7559;&#x3002;</p><p>&#x5728;&#x4F7F;&#x7528;&#x7248;&#x672C;&#x63A7;&#x5236;&#x5DE5;&#x5177;&#x65F6;&#xFF0C;&#x6211;&#x901A;&#x5E38;&#x4FDD;&#x7559;&#x7B2C;&#x4E00;&#x7C7B;&#x3001;&#x7B2C;&#x4E09;&#x7C7B;&#x548C;&#x7B2C;&#x4E94;&#x7C7B;&#x6587;&#x4EF6;&#x3002;&#x4F46;&#x662F;&#x7B2C;&#x4E09;&#x7C7B;&#x6587;&#x4EF6;&#x901A;&#x5E38;&#x5F88;&#x5C11;&#x88AB;&#x53CD;&#x590D;&#x4F7F;&#x7528;&#x3002;</p><p>&#x6240;&#x4EE5;&#xFF0C;&#x4E3A;&#x4E86;&#x7EF4;&#x62A4;&#x4E00;&#x4E2A;&#x6700;&#x5C0F;&#x5DE5;&#x7A0B;&#xFF0C;&#x7B2C;&#x4E00;&#x7C7B;&#x548C;&#x7B2C;&#x4E94;&#x7C7B;&#x6587;&#x4EF6;&#x662F;&#x4E00;&#x5B9A;&#x8981;&#x4FDD;&#x7559;&#x7684;&#x3002;</p><p>&#x6B64;&#x5916;&#xFF0C;&#x5F53;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x7684;&#x8BBE;&#x7F6E;&#x5185;&#x5BB9;&#x9700;&#x8981;&#x8F6C;&#x79FB;&#x7ED9;&#x53E6;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x65F6;&#xFF0C;&#x4F8B;&#x5982;&#x5F15;&#x811A;&#x5206;&#x914D;&#x4FE1;&#x606F;&#xFF0C;&#x9700;&#x8981;&#x8F6C;&#x79FB;.tcl</p><hr><blockquote><p><a href="http://www.eetop.cn/blog/html/80/70680-25229.html" target="_blank">http://www.eetop.cn/blog/html/80/70680-25229.html</a></p></blockquote><!-- QARFile.md ends here -->
+
+
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Quartus II">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"QAR文件","level":"1.2.1","depth":2,"previous":{"title":"Quartus II","level":"1.2","depth":1,"path":"QuartusII/README.md","ref":"QuartusII/README.md","articles":[{"title":"QAR文件","level":"1.2.1","depth":2,"path":"QuartusII/QARFile.md","ref":"QuartusII/QARFile.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"QuartusII/QARFile.md","mtime":"2017-07-17T14:57:34.446Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2017-07-17T15:24:10.472Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
