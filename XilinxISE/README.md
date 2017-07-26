@@ -4,9 +4,9 @@
 ;; Author: Hongyi Wu(吴鸿毅)
 ;; Email: wuhongyi@qq.com 
 ;; Created: 二 7月 25 09:42:16 2017 (+0800)
-;; Last-Updated: 二 7月 25 12:33:19 2017 (+0800)
+;; Last-Updated: 四 7月 27 03:15:32 2017 (+0800)
 ;;           By: Hongyi Wu(吴鸿毅)
-;;     Update #: 5
+;;     Update #: 6
 ;; URL: http://wuhongyi.cn -->
 
 # Xilinx ISE
@@ -22,7 +22,7 @@ http://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/
 ## 安装
 
 ```bash
-tar -zxvf Xilinx_ISE_DS_Lin_14.7_1015_1.tar -C /home/wuhongyi/
+tar -xvf Xilinx_ISE_DS_Lin_14.7_1015_1.tar -C /home/wuhongyi/
 cd /home/wuhongyi
 Xilinx_ISE_DS_Lin_14.7_1015_1/xsetup
 ```
@@ -39,6 +39,8 @@ Xilinx_ISE_DS_Lin_14.7_1015_1/xsetup
 
 
 ----
+
+新建工程示例 http://blog.csdn.net/lishengbo/article/details/51113794
 
 > http://www.cnblogs.com/tracyone/p/3561781.html
 > http://blog.csdn.net/weiweiliulu/article/details/23351429
