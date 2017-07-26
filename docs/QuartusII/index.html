@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>Quartus II · GitBook</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Quartus II · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -60,7 +60,7 @@
     <link rel="next" href="QARFile.html" />
     
     
-    <link rel="prev" href="../" />
+    <link rel="prev" href="../JTAG.html" />
     
 
     </head>
@@ -102,7 +102,20 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="../JTAG.html">
+            
+                <a href="../JTAG.html">
+            
+                    
+                    JTAG
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="./">
             
                 <a href="./">
             
@@ -116,7 +129,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="QARFile.html">
+        <li class="chapter " data-level="1.3.1" data-path="QARFile.html">
             
                 <a href="QARFile.html">
             
@@ -131,6 +144,19 @@
     
 
             </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../XilinxISE/">
+            
+                <a href="../XilinxISE/">
+            
+                    
+                    Xilinx ISE
+            
+                </a>
+            
+
             
         </li>
     
@@ -185,15 +211,83 @@
 ;; Author: Hongyi Wu(吴鸿毅)
 ;; Email: wuhongyi@qq.com 
 ;; Created: 一 7月 17 22:47:08 2017 (+0800)
-;; Last-Updated: 一 7月 17 22:52:09 2017 (+0800)
+;; Last-Updated: 二 7月 25 13:25:59 2017 (+0800)
 ;;           By: Hongyi Wu(吴鸿毅)
-;;     Update #: 1
+;;     Update #: 3
 ;; URL: http://wuhongyi.cn -->
+<h1 id="quartus-ii">Quartus II</h1>
+<h2 id="&#x5FC5;&#x88C5;&#x7EC4;&#x4EF6;&#xFF1A;">&#x5FC5;&#x88C5;&#x7EC4;&#x4EF6;&#xFF1A;</h2>
+<pre><code>Quartus II
+http://download.altera.com/akdlm/software/acdsinst/15.0/145/ib_installers/QuartusSetup-15.0.0.145-linux.run   2.3GB
+http://download.altera.com/akdlm/software/acdsinst/15.0/145/ib_installers/QuartusHelpSetup-15.0.0.145-linux.run    380MB
+</code></pre><h2 id="&#x9009;&#x88C5;&#x7EC4;&#x4EF6;&#xFF1A;">&#x9009;&#x88C5;&#x7EC4;&#x4EF6;&#xFF1A;</h2>
+<pre><code>&#x5668;&#x4EF6;&#x5E93;&#xFF08;&#x4E0D;&#x7528;&#x5168;&#x88C5;&#xFF0C;&#x7528;&#x54EA;&#x4E2A;&#x7CFB;&#x5217;&#x7684;&#x5668;&#x4EF6;&#x5C31;&#x5B89;&#x88C5;&#x54EA;&#x4E2A;&#x7CFB;&#x5217;&#x7684;&#x5668;&#x4EF6;&#x5E93;&#xFF09;
+Arria II
+http://download.altera.com/akdlm/software/acdsinst/15.0/145/ib_installers/arria-15.0.0.145.qdz    665MB
+Arria 10
+http://download.altera.com/akdlm/software/acdsinst/15.0/145/ib_installers/arria10_part1-15.0.0.145.qdz   2.7GB
+http://download.altera.com/akdlm/software/acdsinst/15.0/145/ib_installers/arria10_part2-15.0.0.145.qdz   3.4GB
+http://download.altera.com/akdlm/software/acdsinst/15.0/145/ib_installers/arria10_part3-15.0.0.145.qdz   2.7GB
+Arria V
+http://download.altera.com/akdlm/software/acdsinst/15.0/145/ib_installers/arriav-15.0.0.145.qdz      1.3GB
+Arria V GZ
+http://download.altera.com/akdlm/software/acdsinst/15.0/145/ib_installers/arriavgz-15.0.0.145.qdz       1.9GB
+Cyclone IV
+http://download.altera.com/akdlm/software/acdsinst/15.0/145/ib_installers/cyclone-15.0.0.145.qdz      464MB
+Cyclone V
+http://download.altera.com/akdlm/software/acdsinst/15.0/145/ib_installers/cyclonev-15.0.0.145.qdz     1.1GB
+MAX II,MAX V
+http://download.altera.com/akdlm/software/acdsinst/15.0/145/ib_installers/max-15.0.0.145.qdz      11.3MB
+MAX 10
+http://download.altera.com/akdlm/software/acdsinst/15.0/145/ib_installers/max10-15.0.0.145.qdz    295MB
+Stratix IV
+http://download.altera.com/akdlm/software/acdsinst/15.0/145/ib_installers/stratixiv-15.0.0.145.qdz    535MB
+Stratix V
+http://download.altera.com/akdlm/software/acdsinst/15.0/145/ib_installers/stratixv-15.0.0.145.qdz     2.8GB
 
 
-<h1 id="quartus-ii">Quartus II</h1><!-- README.md ends here -->
+DSP Builder&#xFF08;&#x662F;MATLAB&#x7684;&#x63D2;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0D;&#x88C5;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x7C7B;&#x4EA7;&#x54C1;&#x5F00;&#x53D1;&#xFF09;
+http://download.altera.com/akdlm/software/acdsinst/15.0/145/ib_installers/DSPBuilderSetup-15.0.0.145-linux.run    63MB
 
+SOC&#xFF08;&#x5FC5;&#x987B;&#x88C5;&#x624D;&#x80FD;&#x5F00;&#x53D1;&#x96C6;&#x6210;&#x9AD8;&#x6027;&#x80FD;&#x786C;&#x6838;Cortex-A&#x7684;SOC FPGA&#xFF0C;&#x5185;&#x542B;&#x5168;&#x4E16;&#x754C;&#x6700;&#x5389;&#x5BB3;&#x7684;ARM&#x5F00;&#x53D1;&#x5DE5;&#x5177;&#xFF0C;&#x6765;&#x81EA;ARM&#x516C;&#x53F8;&#x7684;DS-5&#x5B89;&#x88C5;&#x5305;&#xFF09;
+http://download.altera.com/akdlm/software/acdsinst/15.0/145/ib_installers/SoCEDSSetup-15.0.0.145-linux.run     2.3GB
 
+JNEye&#xFF08;&#x53EF;&#x4EE5;&#x4E0D;&#x88C5;&#xFF0C;&#x7528;&#x4E8E;FPGA&#x9AD8;&#x901F;&#x6536;&#x53D1;&#x5668;&#x7684;PCB&#x7EA7;&#x7684;&#x4EFF;&#x771F;&#x548C;&#x5206;&#x6790;&#xFF0C;&#x4E0D;&#x7528;FPGA&#x7684;&#x9AD8;&#x901F;&#x6536;&#x53D1;&#x5668;&#xFF0C;&#x5C31;&#x4E0D;&#x7528;&#x5B89;&#x88C5;&#x8FD9;&#x4E2A;&#x5DE5;&#x5177;&#xFF09;
+&#x65E0;Linux&#x7248;
+
+Altera OpenCL&#xFF08;&#x7528;C&#x8BED;&#x8A00;&#x5F00;&#x53D1;FPGA&#x7684;&#x5DE5;&#x5177;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0D;&#x88C5;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x548C;&#x79D1;&#x5B66;&#x8BA1;&#x7B97;&#x7C7B;&#x4EA7;&#x54C1;&#x5F00;&#x53D1;&#xFF09;
+Altera SDK for OpenCL
+http://download.altera.com/akdlm/software/acdsinst/15.0/145/ib_installers/AOCLSetup-15.0.0.145-linux.run    273MB
+Altera Runtime Environment for OpenCL Linux x86-64 RPM
+http://download.altera.com/akdlm/software/acdsinst/15.0/145/ib_installers/aocl-rte-15.0.0-1.x86_64.rpm   612KB
+Altera Runtime Environment for OpenCL Linux PowerPC RPM
+http://download.altera.com/akdlm/software/acdsinst/15.0/145/ib_installers/aocl-rte-15.0.0-1.ppc64.rpm    480KB
+Altera Runtime Environment for OpenCL Linux Cyclone V SoC TGZ
+http://download.altera.com/akdlm/software/acdsinst/15.0/145/ib_installers/aocl-rte-15.0.0-1.arm32.tgz    706KB
+Altera Runtime Environment for OpenCL Windows x86-64
+http://download.altera.com/akdlm/software/acdsinst/15.0/145/ib_installers/aocl-rte-15.0.0.145-windows.exe     8.9MB
+
+ModelSim AE&#xFF08;&#x53EF;&#x4EE5;&#x4E0D;&#x88C5;AE&#x7248;&#xFF0C;&#x63A8;&#x8350;&#x66F4;&#x597D;&#x7684;ModelSim SE&#x7248;&#xFF0C;&#x53EF;&#x53BB;Mentor&#x5B98;&#x65B9;&#x7F51;&#x7AD9;&#x4E0B;&#x8F7D;&#x8F6F;&#x4EF6;&#x5BF9;&#x5E94;&#x7684;SE&#x7248;&#x672C;10.3d&#x518D;&#x53BB;&#x627E;Crack&#xFF0C;SE&#x7684;&#x7834;&#x89E3;&#x5668;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x5728;AE&#x4E0A;&#xFF09;
+http://download.altera.com/akdlm/software/acdsinst/15.0/145/ib_installers/ModelSimSetup-15.0.0.145-linux.run    1.1GB
+
+Quartus II Programmer&#xFF08;&#x5EFA;&#x8BAE;&#x5DE5;&#x5382;&#x70E7;&#x5199;&#x6D41;&#x6C34;&#x7EBF;&#x4E0A;&#x5B89;&#x88C5;&#xFF0C;&#x666E;&#x901A;&#x5F00;&#x53D1;&#x8005;&#x4E0D;&#x8981;&#x5B89;&#x88C5;&#xFF0C;&#x56E0;&#x4E3A;Quartus II&#x5DF2;&#x7ECF;&#x96C6;&#x6210;&#x4E86;&#x6B64;&#x5DE5;&#x5177;&#xFF09;
+http://download.altera.com/akdlm/software/acdsinst/15.0/145/ib_installers/QuartusProgrammerSetup-15.0.0.145-linux.run   692MB
+</code></pre><p>&#x786C;&#x76D8;&#x7A7A;&#x95F4;&#xFF1A;&#x5B8C;&#x5168;&#x5B89;&#x88C5;Altera&#x5168;&#x90E8;&#x8BBE;&#x8BA1;&#x5957;&#x88C5; v15.0 &#x5BF9;&#x4E8E;&#x60A8;&#x8981;&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;&#x7684;&#x786C;&#x76D8;&#x6216;&#x8005;&#x5206;&#x533A;&#xFF0C;&#x5927;&#x7EA6;&#x9700;&#x8981;31GB&#x7684;&#x53EF;&#x7528;&#x786C;&#x76D8;&#x7A7A;&#x95F4;&#x3002;
+&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x8981;&#x6C42;&#xFF1A;&#x5FC5;&#x987B;&#x662F;64&#x4F4D;&#x7684;Linux&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF0C;Altera&#x63A8;&#x8350;RHEL 5&#x6216;&#x8005;6&#x3002;</p>
+<hr>
+<p>&#x5C06;&#x8981;&#x5B89;&#x88C5;&#x7684;&#x5305;&#x4E0B;&#x8F7D;&#x5230;&#x540C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x5185;</p>
+<pre><code class="lang-bash">chmod 774 QuartusSetup-15.0.0.145-linux.run
+./QuartusSetup-15.0.0.145-linux.run
+<span class="hljs-comment">#&#x8BBE;&#x7F6E;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;&#xFF0C;&#x9ED8;&#x8BA4;&#x4F1A;&#x5C06;&#x8BE5;&#x6587;&#x4EF6;&#x5939;&#x5185;&#x7684;&#x8BF4;&#x6709;&#x5305;&#x90FD;&#x5B89;&#x88C5;&#x4E86;</span>
+</code></pre>
+<p>&#x5B89;&#x88C5;Quartus II 15.0&#x540E;&#xFF08;Linux&#x7248;&#x672C;&#xFF09;&#xFF0C;&#x7834;&#x89E3;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>&#x7B2C;&#x4E00;&#x6B65;&#xFF1A; &#x628A;Crack_QII_15.0_Linux.zip&#x91CC;&#x9762;&#x7684;libgcl_afcq.so&#x548C;libsys_cpt.so&#x6587;&#x4EF6;&#x5206;&#x522B;&#x89E3;&#x538B;&#x7F29;&#x540E;&#xFF0C;&#x66FF;&#x6362;/path_to/altrea/15.0/quartus/linux64&#x91CC;&#x9762;&#x7684;&#x540C;&#x540D;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x6837;2&#x4E2A;so&#x6587;&#x4EF6;&#x91CC;&#x9762;&#x7684;&#x52A0;&#x5BC6;&#x70B9;&#x5C31;&#x5168;&#x90E8;&#x88AB;&#x7834;&#x89E3;&#x4E86;&#x3002;</li>
+<li>&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A; &#x628A;license.dat&#x91CC;&#x7684;XXXXXXXXXXXX &#x7528;&#x4F60;&#x7684;&#x7F51;&#x5361;&#x53F7;&#x66FF;&#x6362;(&#x5728;Quartus II 15.0&#x7684;Tools&#x83DC;&#x5355;&#x4E0B;&#x9009;&#x62E9;License Setup&#xFF0C;&#x4E0B;&#x9762;&#x5C31;&#x6709;NIC ID)&#x3002;</li>
+<li>&#x7B2C;&#x4E09;&#x6B65;&#xFF1A; &#x5728;Quartus II 15.0&#x7684;Tools&#x83DC;&#x5355;&#x4E0B;&#x9009;&#x62E9;License Setup&#xFF0C;&#x7136;&#x540E;&#x9009;&#x62E9;License file&#xFF0C;&#x6700;&#x540E;&#x70B9;&#x51FB;OK&#x3002;</li>
+<li>&#x6CE8;&#x610F;&#xFF1A;license&#x6587;&#x4EF6;&#x5B58;&#x653E;&#x7684;&#x8DEF;&#x5F84;&#x540D;&#x79F0;&#x4E0D;&#x80FD;&#x5305;&#x542B;&#x6C49;&#x5B57;&#x548C;&#x7A7A;&#x683C;&#xFF0C;&#x7A7A;&#x683C;&#x53EF;&#x4EE5;&#x7528;&#x4E0B;&#x5212;&#x7EBF;&#x4EE3;&#x66FF;&#x3002;</li>
+</ul>
+<!-- README.md ends here -->
 
                                 
                                 </section>
@@ -221,7 +315,7 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 简介">
+                <a href="../JTAG.html" class="navigation navigation-prev " aria-label="Previous page: JTAG">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -237,7 +331,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Quartus II","level":"1.2","depth":1,"next":{"title":"QAR文件","level":"1.2.1","depth":2,"path":"QuartusII/QARFile.md","ref":"QuartusII/QARFile.md","articles":[]},"previous":{"title":"简介","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"QuartusII/README.md","mtime":"2017-07-17T14:52:09.329Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2017-07-22T16:11:43.503Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Quartus II","level":"1.3","depth":1,"next":{"title":"QAR文件","level":"1.3.1","depth":2,"path":"QuartusII/QARFile.md","ref":"QuartusII/QARFile.md","articles":[]},"previous":{"title":"JTAG","level":"1.2","depth":1,"path":"JTAG.md","ref":"JTAG.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"QuartusII/README.md","mtime":"2017-07-25T05:25:59.996Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-26T13:09:32.546Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
