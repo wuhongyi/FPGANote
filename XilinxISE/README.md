@@ -4,9 +4,9 @@
 ;; Author: Hongyi Wu(吴鸿毅)
 ;; Email: wuhongyi@qq.com 
 ;; Created: 二 7月 25 09:42:16 2017 (+0800)
-;; Last-Updated: 四 7月 27 03:15:32 2017 (+0800)
+;; Last-Updated: 五 7月 28 16:30:50 2017 (+0800)
 ;;           By: Hongyi Wu(吴鸿毅)
-;;     Update #: 6
+;;     Update #: 10
 ;; URL: http://wuhongyi.cn -->
 
 # Xilinx ISE
@@ -31,16 +31,31 @@ Xilinx_ISE_DS_Lin_14.7_1015_1/xsetup
 
 ## 激活
 
-启动ISE，以绝对路径执行
-```bash
-/home/wuhongyi/Xilinx/14.7/ISE_DS/ISE/bin/lin64/ise
-```
-成功启动之后打开HELP菜单的Mange Licence子项，然后再弹出的窗口中点击Load Licence然后弹出的浏览窗口中选择你的licence即可。
+成功启动之后打开HELP菜单的Mange Licence子项，然后再弹出的窗口中点击Load Licence然后弹出的浏览窗口中选择你的licence即可。或者将Licence文件放在用户目录下 .Xlinix 文件夹中。
 
+
+## 启动软件
+
+加载配置脚本
+
+```bash
+source settings64.sh  #该脚本在 /home/wuhongyi/Xilinx/14.7/ISE_DS/ 目录下
+```
+
+加载脚本之后
+
+```bash
+ise
+```
 
 ----
 
-新建工程示例 http://blog.csdn.net/lishengbo/article/details/51113794
+[新建工程示例](http://blog.csdn.net/lishengbo/article/details/51113794)  
+[Xilinx ISE12.0 烧录步骤](http://xilinx.eetrend.com/forum/6824)  
+[Xilinx13.4调试环境安装步骤](http://wuhongyi.cn/VHDLNote/pdf/XilinxISE/Xilinx13.4调试环境安装步骤.doc)
+
+
+----
 
 > http://www.cnblogs.com/tracyone/p/3561781.html
 > http://blog.csdn.net/weiweiliulu/article/details/23351429
