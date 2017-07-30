@@ -4,9 +4,9 @@
 ;; Author: Hongyi Wu(吴鸿毅)
 ;; Email: wuhongyi@qq.com 
 ;; Created: 五 7月 28 16:36:00 2017 (+0800)
-;; Last-Updated: 五 7月 28 20:09:06 2017 (+0800)
+;; Last-Updated: 五 7月 28 22:47:10 2017 (+0800)
 ;;           By: Hongyi Wu(吴鸿毅)
-;;     Update #: 2
+;;     Update #: 4
 ;; URL: http://wuhongyi.cn -->
 
 # README
@@ -19,9 +19,26 @@
 - 库（library）。库存放已经编译的实体、构造体、包集合和配置等。
 
 
+## VHDL 实体
+
+一个实体由实体头部和实体声明部分构成。其语法格式为：
+
+```vhdl
+entity identifier is
+	entity_header  --实体头部
+	entity_declarative_part  --实体声明部分
+begin
+	[entity_atatement_part]  --实体的描述部分
+end [entity] [entity_simple_name]
+
+-- [] 表示可选的参数
+-- 如果出现entity_simple_name，该名字必须和identifier一致。
+```
 
 
+###实体头部
 
+实体头部由类属说明列表和端口说明两部分组成。
 
 
 

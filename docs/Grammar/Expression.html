@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Xilinx ISE · GitBook</title>
+        <title>表达式 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="PinConstraint.html" />
     
-    
-    <link rel="prev" href="../QuartusII/QARFile.html" />
+    <link rel="prev" href="LinguisticElements.html" />
     
 
     </head>
@@ -160,9 +158,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5" data-path="./">
+        <li class="chapter " data-level="1.5" data-path="../XilinxISE/">
             
-                <a href="./">
+                <a href="../XilinxISE/">
             
                     
                     Xilinx ISE
@@ -174,9 +172,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="PinConstraint.html">
+        <li class="chapter " data-level="1.5.1" data-path="../XilinxISE/PinConstraint.html">
             
-                <a href="PinConstraint.html">
+                <a href="../XilinxISE/PinConstraint.html">
             
                     
                     管脚约束
@@ -192,9 +190,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="../Grammar/">
+        <li class="chapter " data-level="1.6" data-path="./">
             
-                <a href="../Grammar/">
+                <a href="./">
             
                     
                     语法
@@ -206,9 +204,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../Grammar/LinguisticElements.html">
+        <li class="chapter " data-level="1.6.1" data-path="LinguisticElements.html">
             
-                <a href="../Grammar/LinguisticElements.html">
+                <a href="LinguisticElements.html">
             
                     
                     语言要素
@@ -219,9 +217,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="../Grammar/Expression.html">
+        <li class="chapter active" data-level="1.6.2" data-path="Expression.html">
             
-                <a href="../Grammar/Expression.html">
+                <a href="Expression.html">
             
                     
                     表达式
@@ -267,7 +265,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Xilinx ISE</a>
+        <a href=".." >表达式</a>
     </h1>
 </div>
 
@@ -282,56 +280,51 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <!-- README.md --- 
+                                <!-- Expression.md --- 
 ;; 
 ;; Description: 
 ;; Author: Hongyi Wu(吴鸿毅)
 ;; Email: wuhongyi@qq.com 
-;; Created: 二 7月 25 09:42:16 2017 (+0800)
-;; Last-Updated: 六 7月 29 01:46:17 2017 (+0800)
+;; Created: 六 7月 29 00:43:07 2017 (+0800)
+;; Last-Updated: 六 7月 29 00:54:21 2017 (+0800)
 ;;           By: Hongyi Wu(吴鸿毅)
-;;     Update #: 16
+;;     Update #: 1
 ;; URL: http://wuhongyi.cn -->
-<h1 id="xilinx-ise">Xilinx ISE</h1>
-<h2 id="&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;&#x5305;">&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;&#x5305;</h2>
-<p>&#x5230;&#x5B98;&#x7F51;&#x6CE8;&#x518C;&#xFF0C;&#x7136;&#x540E;&#x4E0B;&#x8F7D;linux&#x7248;&#x672C;&#x7684;ISE14.7&#x3002;</p>
-<p>&#x94FE;&#x63A5;&#xFF1A;<br><a href="http://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/design-tools.html" target="_blank">http://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/design-tools.html</a> </p>
-<h2 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h2>
-<pre><code class="lang-bash">tar -xvf Xilinx_ISE_DS_L<span class="hljs-keyword">in</span>_14.7_1015_1.tar -C /home/wuhongyi/
-<span class="hljs-built_in">cd</span> /home/wuhongyi
-Xilinx_ISE_DS_L<span class="hljs-keyword">in</span>_14.7_1015_1/xsetup
-</code></pre>
-<p>&#x7136;&#x540E;&#x5F39;&#x51FA;&#x7684;&#x662F;&#x56FE;&#x5F62;&#x5316;&#x5B89;&#x88C5;&#x5411;&#x5BFC;&#xFF0C;&#x9009;&#x62E9;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;&#xFF0C;&#x5176;&#x5B83;&#x5168;&#x90E8;&#x9ED8;&#x8BA4;&#x5373;&#x53EF;&#x3002;&#x672C;&#x4EBA;&#x5B89;&#x88C5;&#x5728;/home/wuhongyi/Xilinx&#x4E0B;</p>
-<h2 id="&#x6FC0;&#x6D3B;">&#x6FC0;&#x6D3B;</h2>
-<p>&#x6210;&#x529F;&#x542F;&#x52A8;&#x4E4B;&#x540E;&#x6253;&#x5F00;HELP&#x83DC;&#x5355;&#x7684;Mange Licence&#x5B50;&#x9879;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5F39;&#x51FA;&#x7684;&#x7A97;&#x53E3;&#x4E2D;&#x70B9;&#x51FB;Load Licence&#x7136;&#x540E;&#x5F39;&#x51FA;&#x7684;&#x6D4F;&#x89C8;&#x7A97;&#x53E3;&#x4E2D;&#x9009;&#x62E9;&#x4F60;&#x7684;licence&#x5373;&#x53EF;&#x3002;&#x6216;&#x8005;&#x5C06;Licence&#x6587;&#x4EF6;&#x653E;&#x5728;&#x7528;&#x6237;&#x76EE;&#x5F55;&#x4E0B; .Xlinix &#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x3002;</p>
-<h2 id="&#x542F;&#x52A8;&#x8F6F;&#x4EF6;">&#x542F;&#x52A8;&#x8F6F;&#x4EF6;</h2>
-<p>&#x52A0;&#x8F7D;&#x914D;&#x7F6E;&#x811A;&#x672C;</p>
-<pre><code class="lang-bash"><span class="hljs-built_in">source</span> settings64.sh  <span class="hljs-comment">#&#x8BE5;&#x811A;&#x672C;&#x5728; /home/wuhongyi/Xilinx/14.7/ISE_DS/ &#x76EE;&#x5F55;&#x4E0B;</span>
-</code></pre>
-<p>&#x52A0;&#x8F7D;&#x811A;&#x672C;&#x4E4B;&#x540E;</p>
-<pre><code class="lang-bash">ise
-</code></pre>
-<hr>
-<p><a href="http://blog.csdn.net/lishengbo/article/details/51113794" target="_blank">&#x65B0;&#x5EFA;&#x5DE5;&#x7A0B;&#x793A;&#x4F8B;</a><br><a href="http://xilinx.eetrend.com/forum/6824" target="_blank">Xilinx ISE12.0 &#x70E7;&#x5F55;&#x6B65;&#x9AA4;</a><br><a href="http://wuhongyi.cn/VHDLNote/pdf/XilinxISE/Xilinx13.4&#x8C03;&#x8BD5;&#x73AF;&#x5883;&#x5B89;&#x88C5;&#x6B65;&#x9AA4;.doc" target="_blank">Xilinx13.4&#x8C03;&#x8BD5;&#x73AF;&#x5883;&#x5B89;&#x88C5;&#x6B65;&#x9AA4;</a></p>
-<p><a href="http://blog.sina.com.cn/s/blog_62c7814b0101jma7.html" target="_blank">UCF&#x6587;&#x4EF6;&#x4E2D;&#x65F6;&#x5E8F;&#x7EA6;&#x675F;&#x7684;&#x8BED;&#x6CD5;</a><br><a href="http://www.360doc.com/content/14/1030/15/4077337_421173478.shtml" target="_blank">ISE &#x7EA6;&#x675F;&#x6587;&#x4EF6; *.ucf&#x7684;&#x5199;&#x6CD5;</a>
-<a href="http://blog.csdn.net/ladywn/article/details/34531871" target="_blank">ISE&#x4E2D;UCF&#x7EA6;&#x675F;&#x6587;&#x4EF6;&#x7684;&#x7F16;&#x5199;</a></p>
-<hr>
-<p>&#x5DE5;&#x7A0B;&#x6587;&#x4EF6;</p>
-<pre><code>*.xise
-
-*.vhd
-*.ucf
-
-
-*.bit
-*.mcs
-</code></pre><hr>
-<blockquote>
-<p><a href="http://www.cnblogs.com/tracyone/p/3561781.html" target="_blank">http://www.cnblogs.com/tracyone/p/3561781.html</a>
-<a href="http://blog.csdn.net/weiweiliulu/article/details/23351429" target="_blank">http://blog.csdn.net/weiweiliulu/article/details/23351429</a>
-<a href="http://blog.sina.com.cn/s/blog_98740ded0101jxt8.html" target="_blank">http://blog.sina.com.cn/s/blog_98740ded0101jxt8.html</a></p>
+<h1 id="&#x8868;&#x8FBE;&#x5F0F;">&#x8868;&#x8FBE;&#x5F0F;</h1>
+<h2 id="vhdl&#x64CD;&#x4F5C;&#x7B26;">VHDL&#x64CD;&#x4F5C;&#x7B26;</h2>
+<p>&#x903B;&#x8F91;&#x64CD;&#x4F5C;&#x7B26;&#xFF1A;  </p>
+<ul>
+<li>and(&#x4E0E;&#x903B;&#x8F91;&#x64CD;&#x4F5C;)</li>
+<li>nand(&#x4E0E;&#x975E;&#x903B;&#x8F91;&#x64CD;&#x4F5C;)</li>
+<li>or(&#x6216;&#x903B;&#x8F91;&#x64CD;&#x4F5C;)</li>
+<li>nor(&#x6216;&#x975E;&#x903B;&#x8F91;&#x64CD;&#x4F5C;)</li>
+<li>xor(&#x5F02;&#x6216;&#x903B;&#x8F91;&#x64CD;&#x4F5C;)</li>
+<li>xnor(&#x5F02;&#x6216;&#x975E;&#x903B;&#x8F91;&#x64CD;&#x4F5C;)</li>
+<li>not(&#x53D6;&#x53CD;&#x903B;&#x8F91;&#x64CD;&#x4F5C;)</li>
+</ul>
+<p>&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x53EF;&#x64CD;&#x4F5C;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF1A;  </p>
+<ul>
+<li>bit/std_logic</li>
+<li>bit_vector/std_logic_vector</li>
+<li>boolean</li>
+</ul>
+<p>&#x5173;&#x7CFB;&#x64CD;&#x4F5C;&#x7B26;</p>
+<p>&#x5173;&#x7CFB;&#x8FD0;&#x7B97;&#x7B26;&#x7528;&#x4E8E;&#x6BD4;&#x8F83;&#x76F8;&#x540C;&#x7236;&#x7C7B;&#x7684;&#x4E24;&#x4E2A;&#x64CD;&#x4F5C;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x5E03;&#x5C14;&#x503C;&#xFF1A;</p>
+<ul>
+<li>=(&#x7B49;&#x4E8E;)</li>
+<li>/=(&#x4E0D;&#x7B49;&#x4E8E;)</li>
+<li>&lt;(&#x5C0F;&#x4E8E;)</li>
+<li>&lt;=(&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;)</li>
+<li><blockquote>
+<p>(&#x5927;&#x4E8E;)</p>
 </blockquote>
-<!-- README.md ends here -->
+</li>
+<li><blockquote>
+<p>=(&#x5927;&#x4E8E;&#x7B49;&#x4E8E;)</p>
+</blockquote>
+</li>
+</ul>
+<!-- Expression.md ends here -->
 
                                 
                                 </section>
@@ -359,14 +352,10 @@ Xilinx_ISE_DS_L<span class="hljs-keyword">in</span>_14.7_1015_1/xsetup
 
             
                 
-                <a href="../QuartusII/QARFile.html" class="navigation navigation-prev " aria-label="Previous page: QAR文件">
+                <a href="LinguisticElements.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 语言要素">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="PinConstraint.html" class="navigation navigation-next " aria-label="Next page: 管脚约束">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -375,7 +364,7 @@ Xilinx_ISE_DS_L<span class="hljs-keyword">in</span>_14.7_1015_1/xsetup
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Xilinx ISE","level":"1.5","depth":1,"next":{"title":"管脚约束","level":"1.5.1","depth":2,"path":"XilinxISE/PinConstraint.md","ref":"XilinxISE/PinConstraint.md","articles":[]},"previous":{"title":"QAR文件","level":"1.4.1","depth":2,"path":"QuartusII/QARFile.md","ref":"QuartusII/QARFile.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"XilinxISE/README.md","mtime":"2017-07-28T17:46:17.378Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-30T11:14:24.595Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"表达式","level":"1.6.2","depth":2,"previous":{"title":"语言要素","level":"1.6.1","depth":2,"path":"Grammar/LinguisticElements.md","ref":"Grammar/LinguisticElements.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Grammar/Expression.md","mtime":"2017-07-28T16:54:21.839Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-30T11:14:24.595Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

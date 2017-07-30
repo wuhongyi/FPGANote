@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>语法 · GitBook</title>
+        <title>语言要素 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="LinguisticElements.html" />
+    <link rel="next" href="Expression.html" />
     
     
-    <link rel="prev" href="../XilinxISE/PinConstraint.html" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -192,7 +192,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6" data-path="./">
+        <li class="chapter " data-level="1.6" data-path="./">
             
                 <a href="./">
             
@@ -206,7 +206,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="LinguisticElements.html">
+        <li class="chapter active" data-level="1.6.1" data-path="LinguisticElements.html">
             
                 <a href="LinguisticElements.html">
             
@@ -267,7 +267,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >语法</a>
+        <a href=".." >语言要素</a>
     </h1>
 </div>
 
@@ -282,40 +282,136 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <!-- README.md --- 
+                                <!-- LinguisticElements.md --- 
 ;; 
 ;; Description: 
 ;; Author: Hongyi Wu(吴鸿毅)
 ;; Email: wuhongyi@qq.com 
-;; Created: 五 7月 28 16:36:00 2017 (+0800)
-;; Last-Updated: 五 7月 28 22:47:10 2017 (+0800)
+;; Created: 五 7月 28 23:00:48 2017 (+0800)
+;; Last-Updated: 五 7月 28 23:22:24 2017 (+0800)
 ;;           By: Hongyi Wu(吴鸿毅)
-;;     Update #: 4
+;;     Update #: 1
 ;; URL: http://wuhongyi.cn -->
-<h1 id="readme">README</h1>
-<p>&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;VHDL&#x8BBE;&#x8BA1;&#x5E94;&#x8BE5;&#x5305;&#x62EC;&#xFF1A;</p>
-<ul>
-<li>&#x5B9E;&#x4F53;&#xFF08;entity&#xFF09;&#x3002;&#x4E3B;&#x8981;&#x662F;&#x7528;&#x4E8E;&#x63CF;&#x8FF0;&#x548C;&#x5916;&#x90E8;&#x8BBE;&#x5907;&#x7684;&#x63A5;&#x53E3;&#x4FE1;&#x53F7;&#x4EE5;&#x53CA;&#x7C7B;&#x5C5E;&#x7B49;&#x3002;</li>
-<li>&#x7ED3;&#x6784;&#x4F53;&#xFF08;architecture&#xFF09;&#x3002;&#x7528;&#x4E8E;&#x63CF;&#x8FF0;&#x7CFB;&#x7EDF;&#x7684;&#x5177;&#x4F53;&#x903B;&#x8F91;&#x884C;&#x4E3A;&#x529F;&#x80FD;&#x3002;</li>
-<li>&#x914D;&#x7F6E;&#xFF08;configuration&#xFF09;&#x3002;&#x914D;&#x7F6E;&#x7528;&#x6765;&#x4ECE;&#x5E93;&#x4E2D;&#x9009;&#x62E9;&#x6240;&#x9700;&#x5355;&#x5143;&#x7231;&#x7EC4;&#x6210;&#x7CFB;&#x7EDF;&#x8BBE;&#x8BA1;&#x7684;&#x4E0D;&#x540C;&#x7248;&#x672C;&#x3002;</li>
-<li>&#x5305;&#x96C6;&#x5408;&#xFF08;package&#xFF09;&#x3002;&#x5305;&#x5B58;&#x653E;&#x8BBE;&#x8BA1;&#x4F7F;&#x7528;&#x5230;&#x7684;&#x516C;&#x5171;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3001;&#x5E38;&#x6570;&#x548C;&#x5B50;&#x7A0B;&#x5E8F;&#x7B49;&#x3002;</li>
-<li>&#x5E93;&#xFF08;library&#xFF09;&#x3002;&#x5E93;&#x5B58;&#x653E;&#x5DF2;&#x7ECF;&#x7F16;&#x8BD1;&#x7684;&#x5B9E;&#x4F53;&#x3001;&#x6784;&#x9020;&#x4F53;&#x3001;&#x5305;&#x96C6;&#x5408;&#x548C;&#x914D;&#x7F6E;&#x7B49;&#x3002;</li>
-</ul>
-<h2 id="vhdl-&#x5B9E;&#x4F53;">VHDL &#x5B9E;&#x4F53;</h2>
-<p>&#x4E00;&#x4E2A;&#x5B9E;&#x4F53;&#x7531;&#x5B9E;&#x4F53;&#x5934;&#x90E8;&#x548C;&#x5B9E;&#x4F53;&#x58F0;&#x660E;&#x90E8;&#x5206;&#x6784;&#x6210;&#x3002;&#x5176;&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;</p>
-<pre><code class="lang-vhdl"><span class="hljs-keyword">entity</span> identifier <span class="hljs-keyword">is</span>
-    entity_header  <span class="hljs-comment">--&#x5B9E;&#x4F53;&#x5934;&#x90E8;</span>
-    entity_declarative_part  <span class="hljs-comment">--&#x5B9E;&#x4F53;&#x58F0;&#x660E;&#x90E8;&#x5206;</span>
-<span class="hljs-keyword">begin</span>
-    [entity_atatement_part]  <span class="hljs-comment">--&#x5B9E;&#x4F53;&#x7684;&#x63CF;&#x8FF0;&#x90E8;&#x5206;</span>
-<span class="hljs-keyword">end</span> [<span class="hljs-keyword">entity</span>] [entity_simple_name]
+<h1 id="&#x8BED;&#x8A00;&#x8981;&#x7D20;">&#x8BED;&#x8A00;&#x8981;&#x7D20;</h1>
+<h2 id="&#x4FDD;&#x7559;&#x5B57;">&#x4FDD;&#x7559;&#x5B57;</h2>
+<p>IEEE Std 1076-1993&#x6807;&#x51C6;&#x4E2D;&#x7684;&#x5173;&#x952E;&#x5B57;&#x5217;&#x8868;&#xFF1A;</p>
+<pre><code class="lang-vhdl"><span class="hljs-keyword">abs</span>
+<span class="hljs-keyword">access</span>
+<span class="hljs-keyword">after</span>
+<span class="hljs-keyword">alias</span>
+<span class="hljs-keyword">all</span>
+<span class="hljs-keyword">and</span>
+<span class="hljs-keyword">architecture</span>
+<span class="hljs-keyword">array</span>
+<span class="hljs-keyword">assert</span>
+<span class="hljs-keyword">attribute</span>
 
-<span class="hljs-comment">-- [] &#x8868;&#x793A;&#x53EF;&#x9009;&#x7684;&#x53C2;&#x6570;</span>
-<span class="hljs-comment">-- &#x5982;&#x679C;&#x51FA;&#x73B0;entity_simple_name&#xFF0C;&#x8BE5;&#x540D;&#x5B57;&#x5FC5;&#x987B;&#x548C;identifier&#x4E00;&#x81F4;&#x3002;</span>
+<span class="hljs-keyword">begin</span>
+<span class="hljs-keyword">block</span>
+<span class="hljs-keyword">body</span>
+<span class="hljs-keyword">buffer</span>
+<span class="hljs-keyword">bus</span>
+
+<span class="hljs-keyword">case</span>
+<span class="hljs-keyword">component</span>
+<span class="hljs-keyword">configuration</span>
+<span class="hljs-keyword">constant</span>
+
+<span class="hljs-keyword">disconnect</span>
+<span class="hljs-keyword">downto</span>
+
+<span class="hljs-keyword">else</span>
+<span class="hljs-keyword">elsif</span>
+<span class="hljs-keyword">end</span>
+<span class="hljs-keyword">entity</span>
+<span class="hljs-keyword">exit</span>
+
+<span class="hljs-keyword">file</span>
+<span class="hljs-keyword">for</span>
+<span class="hljs-keyword">function</span>
+
+<span class="hljs-keyword">generate</span>
+<span class="hljs-keyword">generic</span>
+<span class="hljs-keyword">group</span>
+<span class="hljs-keyword">guarded</span>
+
+<span class="hljs-keyword">if</span>
+<span class="hljs-keyword">impure</span>
+<span class="hljs-keyword">in</span>
+<span class="hljs-keyword">inertial</span>
+<span class="hljs-keyword">inout</span>
+<span class="hljs-keyword">is</span>
+
+<span class="hljs-keyword">label</span>
+<span class="hljs-keyword">library</span>
+<span class="hljs-keyword">linkage</span>
+<span class="hljs-keyword">literal</span>
+<span class="hljs-keyword">loop</span>
+
+<span class="hljs-keyword">map</span>
+<span class="hljs-keyword">mod</span>
+
+<span class="hljs-keyword">nand</span>
+<span class="hljs-keyword">new</span>
+<span class="hljs-keyword">next</span>
+<span class="hljs-keyword">nor</span>
+<span class="hljs-keyword">not</span>
+<span class="hljs-keyword">null</span>
+
+<span class="hljs-keyword">of</span>
+<span class="hljs-keyword">on</span>
+<span class="hljs-keyword">open</span>
+<span class="hljs-keyword">or</span>
+<span class="hljs-keyword">others</span>
+<span class="hljs-keyword">out</span>
+
+<span class="hljs-keyword">package</span>
+<span class="hljs-keyword">port</span>
+<span class="hljs-keyword">postponed</span>
+<span class="hljs-keyword">procedure</span>
+<span class="hljs-keyword">process</span>
+<span class="hljs-keyword">pure</span>
+
+<span class="hljs-keyword">range</span>
+<span class="hljs-keyword">record</span>
+<span class="hljs-keyword">register</span>
+<span class="hljs-keyword">reject</span>
+<span class="hljs-keyword">rem</span>
+<span class="hljs-keyword">report</span>
+<span class="hljs-keyword">return</span>
+<span class="hljs-keyword">rol</span>
+<span class="hljs-keyword">ror</span>
+
+<span class="hljs-keyword">select</span>
+<span class="hljs-keyword">severity</span>
+<span class="hljs-keyword">signal</span>
+<span class="hljs-keyword">sla</span>
+<span class="hljs-keyword">sll</span>
+<span class="hljs-keyword">sra</span>
+<span class="hljs-keyword">srl</span>
+<span class="hljs-keyword">subtype</span>
+
+<span class="hljs-keyword">then</span>
+<span class="hljs-keyword">to</span>
+<span class="hljs-keyword">transport</span>
+<span class="hljs-keyword">type</span>
+
+<span class="hljs-keyword">unaffected</span>
+<span class="hljs-keyword">units</span>
+<span class="hljs-keyword">until</span>
+<span class="hljs-keyword">use</span>
+
+<span class="hljs-keyword">variable</span>
+
+<span class="hljs-keyword">wait</span>
+<span class="hljs-keyword">when</span>
+<span class="hljs-keyword">while</span>
+<span class="hljs-keyword">with</span>
+
+<span class="hljs-keyword">xnor</span>
+<span class="hljs-keyword">xor</span>
 </code></pre>
-<h3 id="&#x5B9E;&#x4F53;&#x5934;&#x90E8;">&#x5B9E;&#x4F53;&#x5934;&#x90E8;</h3>
-<p>&#x5B9E;&#x4F53;&#x5934;&#x90E8;&#x7531;&#x7C7B;&#x5C5E;&#x8BF4;&#x660E;&#x5217;&#x8868;&#x548C;&#x7AEF;&#x53E3;&#x8BF4;&#x660E;&#x4E24;&#x90E8;&#x5206;&#x7EC4;&#x6210;&#x3002;</p>
-<!-- README.md ends here -->
+<!-- LinguisticElements.md ends here -->
 
                                 
                                 </section>
@@ -343,12 +439,12 @@
 
             
                 
-                <a href="../XilinxISE/PinConstraint.html" class="navigation navigation-prev " aria-label="Previous page: 管脚约束">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 语法">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="LinguisticElements.html" class="navigation navigation-next " aria-label="Next page: 语言要素">
+                <a href="Expression.html" class="navigation navigation-next " aria-label="Next page: 表达式">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -359,7 +455,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"语法","level":"1.6","depth":1,"next":{"title":"语言要素","level":"1.6.1","depth":2,"path":"Grammar/LinguisticElements.md","ref":"Grammar/LinguisticElements.md","articles":[]},"previous":{"title":"管脚约束","level":"1.5.1","depth":2,"path":"XilinxISE/PinConstraint.md","ref":"XilinxISE/PinConstraint.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Grammar/README.md","mtime":"2017-07-28T14:47:10.710Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-30T11:14:24.595Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"语言要素","level":"1.6.1","depth":2,"next":{"title":"表达式","level":"1.6.2","depth":2,"path":"Grammar/Expression.md","ref":"Grammar/Expression.md","articles":[]},"previous":{"title":"语法","level":"1.6","depth":1,"path":"Grammar/README.md","ref":"Grammar/README.md","articles":[{"title":"语言要素","level":"1.6.1","depth":2,"path":"Grammar/LinguisticElements.md","ref":"Grammar/LinguisticElements.md","articles":[]},{"title":"表达式","level":"1.6.2","depth":2,"path":"Grammar/Expression.md","ref":"Grammar/Expression.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Grammar/LinguisticElements.md","mtime":"2017-07-28T15:22:24.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-30T11:14:24.595Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

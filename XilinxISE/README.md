@@ -4,9 +4,9 @@
 ;; Author: Hongyi Wu(吴鸿毅)
 ;; Email: wuhongyi@qq.com 
 ;; Created: 二 7月 25 09:42:16 2017 (+0800)
-;; Last-Updated: 五 7月 28 19:49:49 2017 (+0800)
+;; Last-Updated: 六 7月 29 01:46:17 2017 (+0800)
 ;;           By: Hongyi Wu(吴鸿毅)
-;;     Update #: 12
+;;     Update #: 16
 ;; URL: http://wuhongyi.cn -->
 
 # Xilinx ISE
@@ -57,6 +57,21 @@ ise
 [UCF文件中时序约束的语法](http://blog.sina.com.cn/s/blog_62c7814b0101jma7.html)  
 [ISE 约束文件 *.ucf的写法](http://www.360doc.com/content/14/1030/15/4077337_421173478.shtml)
 [ISE中UCF约束文件的编写](http://blog.csdn.net/ladywn/article/details/34531871)
+
+----
+
+工程文件
+
+```
+*.xise
+
+*.vhd
+*.ucf
+
+
+*.bit
+*.mcs
+```
 
 
 
