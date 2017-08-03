@@ -4,9 +4,9 @@
 ;; Author: Hongyi Wu(吴鸿毅)
 ;; Email: wuhongyi@qq.com 
 ;; Created: 二 7月 25 09:42:16 2017 (+0800)
-;; Last-Updated: 六 7月 29 01:46:17 2017 (+0800)
+;; Last-Updated: 四 8月  3 21:38:48 2017 (+0800)
 ;;           By: Hongyi Wu(吴鸿毅)
-;;     Update #: 16
+;;     Update #: 21
 ;; URL: http://wuhongyi.cn -->
 
 # Xilinx ISE
@@ -73,7 +73,17 @@ ise
 *.mcs
 ```
 
+----
 
+## 其它暂放材料
+
+[ISE中Xilinx全局时钟系统的设计](http://blog.sina.com.cn/s/blog_bff0927b010173bp.html)  
+[DCM 学习 设计](http://xjhit.spaces.eepw.com.cn/articles/article/item/73904)  
+[Xilinx的时钟资源](http://xilinx.eetop.cn/viewnews-1632)
+[《Xilinx可编程逻辑器件设计与开发（基础篇）》连载11：Spartan-6的时钟管理器（CMT）](http://xilinx.eetrend.com/blog/1941)
+[ISE11 中DCM的使用](https://wenku.baidu.com/view/58d7f40b76c66137ee06192d.html)
+
+[FPGA的xilinx培训1.pdf](https://max.book118.com/html/2017/0616/115982247.shtm)
 
 ----
 
