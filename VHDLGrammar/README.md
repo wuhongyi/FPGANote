@@ -4,22 +4,22 @@
 ;; Author: Hongyi Wu(吴鸿毅)
 ;; Email: wuhongyi@qq.com 
 ;; Created: 五 7月 28 16:36:00 2017 (+0800)
-;; Last-Updated: 日 8月 13 19:41:56 2017 (+0800)
+;; Last-Updated: 日 8月 13 20:34:48 2017 (+0800)
 ;;           By: Hongyi Wu(吴鸿毅)
-;;     Update #: 5
+;;     Update #: 6
 ;; URL: http://wuhongyi.cn -->
 
 # README
 
 参考书：
 
-[VHDL入门教程 ppt](http://wuhongyi.cn/VHDLNote/pdf/VHDL/VHDL入门教程.ppt)  
-[VHDL语言入门教程 ppt](http://wuhongyi.cn/VHDLNote/pdf/VHDL/VHDL语言入门教程.ppt)  
-[VHDL-语言入门 pdf](http://wuhongyi.cn/VHDLNote/pdf/VHDL/VHDL-语言入门.pdf)
+[VHDL入门教程 ppt](http://wuhongyi.cn/FPGANote/pdf/VHDL/VHDL入门教程.ppt)  
+[VHDL语言入门教程 ppt](http://wuhongyi.cn/FPGANote/pdf/VHDL/VHDL语言入门教程.ppt)  
+[VHDL-语言入门 pdf](http://wuhongyi.cn/FPGANote/pdf/VHDL/VHDL-语言入门.pdf)
 
 
-[VHDL硬件描述语言与和数字逻辑电路设计_侯伯亭顾新](http://wuhongyi.cn/VHDLNote/pdf/VHDL/VHDL硬件描述语言与和数字逻辑电路设计_侯伯亭顾新.pdf)  
-[VHDL硬件描述语言与数字逻辑电路设计第三版](http://wuhongyi.cn/VHDLNote/pdf/VHDL/VHDL硬件描述语言与数字逻辑电路设计第三版.pdf)
+[VHDL硬件描述语言与和数字逻辑电路设计_侯伯亭顾新](http://wuhongyi.cn/FPGANote/pdf/VHDL/VHDL硬件描述语言与和数字逻辑电路设计_侯伯亭顾新.pdf)  
+[VHDL硬件描述语言与数字逻辑电路设计第三版](http://wuhongyi.cn/FPGANote/pdf/VHDL/VHDL硬件描述语言与数字逻辑电路设计第三版.pdf)
 
 ----
 

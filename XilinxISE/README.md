@@ -4,15 +4,15 @@
 ;; Author: Hongyi Wu(吴鸿毅)
 ;; Email: wuhongyi@qq.com 
 ;; Created: 二 7月 25 09:42:16 2017 (+0800)
-;; Last-Updated: 日 8月 13 19:33:37 2017 (+0800)
+;; Last-Updated: 日 8月 13 20:35:11 2017 (+0800)
 ;;           By: Hongyi Wu(吴鸿毅)
-;;     Update #: 23
+;;     Update #: 24
 ;; URL: http://wuhongyi.cn -->
 
 # Xilinx ISE
 
-[Xilinx13.4调试环境安装步骤](http://wuhongyi.cn/VHDLNote/pdf/XilinxISE/Xilinx134调试环境安装步骤.doc)  
-[XilinxFPGA开发实用教程第1版](http://wuhongyi.cn/VHDLNote/pdf/XilinxISE/XilinxFPGA开发实用教程第1版.pdf)
+[Xilinx13.4调试环境安装步骤](http://wuhongyi.cn/FPGANote/pdf/XilinxISE/Xilinx134调试环境安装步骤.doc)  
+[XilinxFPGA开发实用教程第1版](http://wuhongyi.cn/FPGANote/pdf/XilinxISE/XilinxFPGA开发实用教程第1版.pdf)
 
 
 ## 下载安装包

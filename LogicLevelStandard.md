@@ -4,14 +4,14 @@
 ;; Author: Hongyi Wu(吴鸿毅)
 ;; Email: wuhongyi@qq.com 
 ;; Created: 日 7月 30 18:52:51 2017 (+0800)
-;; Last-Updated: 日 7月 30 19:03:52 2017 (+0800)
+;; Last-Updated: 日 8月 13 20:33:51 2017 (+0800)
 ;;           By: Hongyi Wu(吴鸿毅)
-;;     Update #: 2
+;;     Update #: 3
 ;; URL: http://wuhongyi.cn -->
 
 # 常见逻辑电平标准
 
-[TTL、CMOS、LVTTL、LVCMOS等常见的电平标准](http://wuhongyi.cn/VHDLNote/pdf/TTL、CMOS、LVTTL、LVCMOS等常见的电平标准.doc)
+[TTL、CMOS、LVTTL、LVCMOS等常见的电平标准](http://wuhongyi.cn/FPGANote/pdf/TTL、CMOS、LVTTL、LVCMOS等常见的电平标准.doc)
 
 
 
