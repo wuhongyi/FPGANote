@@ -4,12 +4,15 @@
 ;; Author: Hongyi Wu(吴鸿毅)
 ;; Email: wuhongyi@qq.com 
 ;; Created: 二 7月 25 09:42:16 2017 (+0800)
-;; Last-Updated: 四 8月  3 21:38:48 2017 (+0800)
+;; Last-Updated: 日 8月 13 19:33:37 2017 (+0800)
 ;;           By: Hongyi Wu(吴鸿毅)
-;;     Update #: 21
+;;     Update #: 23
 ;; URL: http://wuhongyi.cn -->
 
 # Xilinx ISE
+
+[Xilinx13.4调试环境安装步骤](http://wuhongyi.cn/VHDLNote/pdf/XilinxISE/Xilinx134调试环境安装步骤.doc)  
+[XilinxFPGA开发实用教程第1版](http://wuhongyi.cn/VHDLNote/pdf/XilinxISE/XilinxFPGA开发实用教程第1版.pdf)
 
 
 ## 下载安装包
@@ -52,7 +55,6 @@ ise
 
 [新建工程示例](http://blog.csdn.net/lishengbo/article/details/51113794)  
 [Xilinx ISE12.0 烧录步骤](http://xilinx.eetrend.com/forum/6824)  
-[Xilinx13.4调试环境安装步骤](http://wuhongyi.cn/VHDLNote/pdf/XilinxISE/Xilinx13.4调试环境安装步骤.doc)
 
 [UCF文件中时序约束的语法](http://blog.sina.com.cn/s/blog_62c7814b0101jma7.html)  
 [ISE 约束文件 *.ucf的写法](http://www.360doc.com/content/14/1030/15/4077337_421173478.shtml)
@@ -83,7 +85,7 @@ ise
 [《Xilinx可编程逻辑器件设计与开发（基础篇）》连载11：Spartan-6的时钟管理器（CMT）](http://xilinx.eetrend.com/blog/1941)
 [ISE11 中DCM的使用](https://wenku.baidu.com/view/58d7f40b76c66137ee06192d.html)
 
-[FPGA的xilinx培训1.pdf](https://max.book118.com/html/2017/0616/115982247.shtm)
+[FPGA的xilinx培训1](https://max.book118.com/html/2017/0616/115982247.shtm)
 
 ----
 
