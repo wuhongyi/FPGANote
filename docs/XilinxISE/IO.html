@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Xilinx Vivado · GitBook</title>
+        <title>I/O端口组件 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../VHDLGrammar/" />
+    <link rel="next" href="../XilinxVivado/" />
     
     
-    <link rel="prev" href="../XilinxISE/IO.html" />
+    <link rel="prev" href="DCMBASE.html" />
     
 
     </head>
@@ -160,9 +160,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="../XilinxISE/">
+        <li class="chapter " data-level="1.5" data-path="./">
             
-                <a href="../XilinxISE/">
+                <a href="./">
             
                     
                     Xilinx ISE
@@ -174,9 +174,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../XilinxISE/PinConstraint.html">
+        <li class="chapter " data-level="1.5.1" data-path="PinConstraint.html">
             
-                <a href="../XilinxISE/PinConstraint.html">
+                <a href="PinConstraint.html">
             
                     
                     管脚约束
@@ -187,9 +187,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../XilinxISE/DCMBASE.html">
+        <li class="chapter " data-level="1.5.2" data-path="DCMBASE.html">
             
-                <a href="../XilinxISE/DCMBASE.html">
+                <a href="DCMBASE.html">
             
                     
                     基本数字时钟管理模块
@@ -200,9 +200,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="../XilinxISE/IO.html">
+        <li class="chapter active" data-level="1.5.3" data-path="IO.html">
             
-                <a href="../XilinxISE/IO.html">
+                <a href="IO.html">
             
                     
                     I/O端口组件
@@ -218,9 +218,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6" data-path="./">
+        <li class="chapter " data-level="1.6" data-path="../XilinxVivado/">
             
-                <a href="./">
+                <a href="../XilinxVivado/">
             
                     
                     Xilinx Vivado
@@ -319,7 +319,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Xilinx Vivado</a>
+        <a href=".." >I/O端口组件</a>
     </h1>
 </div>
 
@@ -334,22 +334,42 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <!-- README.md --- 
+                                <!-- IO.md --- 
 ;; 
 ;; Description: 
 ;; Author: Hongyi Wu(吴鸿毅)
 ;; Email: wuhongyi@qq.com 
-;; Created: 日 8月 13 18:50:28 2017 (+0800)
-;; Last-Updated: 日 8月 13 19:02:18 2017 (+0800)
+;; Created: 三 8月 16 10:45:21 2017 (+0800)
+;; Last-Updated: 三 8月 16 20:38:18 2017 (+0800)
 ;;           By: Hongyi Wu(吴鸿毅)
 ;;     Update #: 2
 ;; URL: http://wuhongyi.cn -->
-<h1 id="xilinx-vivado">Xilinx Vivado</h1>
+<h1 id="io&#x7AEF;&#x53E3;&#x7EC4;&#x4EF6;">I/O&#x7AEF;&#x53E3;&#x7EC4;&#x4EF6;</h1>
+<p>I/O&#x7EC4;&#x4EF6;&#x63D0;&#x4F9B;&#x4E86;&#x672C;&#x5730;&#x65F6;&#x949F;&#x7F13;&#x5B58;&#x3001;&#x6807;&#x51C6;&#x5355;&#x7AEF;I/O&#x7F13;&#x5B58;&#x3001;&#x5DEE;&#x5206;I/O&#x4FE1;&#x53F7;&#x7F13;&#x5B58;&#x3001;DDR&#x4E13;&#x7528;I/O&#x4FE1;&#x53F7;&#x7F13;&#x5B58;&#x3001;&#x53EF;&#x53D8;&#x62BD;&#x5934;&#x5EF6;&#x8FDF;&#x94FE;&#x3001;&#x4E0A;&#x62C9;&#x3001;&#x4E0B;&#x62C9;&#x4EE5;&#x53CA;&#x5355;&#x7AEF;&#x4FE1;&#x53F7;&#x548C;&#x5DEE;&#x5206;&#x4FE1;&#x53F7;&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x4E92;&#x8F6C;&#x6362;&#xFF0C;&#x5177;&#x4F53;&#x5305;&#x62EC;&#x4E86;21&#x4E2A;&#x539F;&#x8BED;&#x3002;</p>
 <ul>
-<li>&#x7535;&#x5B50;&#x7CFB;&#x7EDF;EDA&#x65B0;&#x6280;&#x672F;&#x4E1B;&#x4E66;&#xB7;Xilinx FPGA&#x6743;&#x5A01;&#x8BBE;&#x8BA1;&#x6307;&#x5357;&#xFF1A;Vivado 2014&#x96C6;&#x6210;&#x5F00;&#x53D1;&#x73AF;&#x5883;</li>
-<li>&#x5DE5;&#x7A0B;&#x6280;&#x672F;&#x4E1B;&#x4E66;&#xFF1A;Xilinx&#x65B0;&#x4E00;&#x4EE3;FPGA&#x8BBE;&#x8BA1;&#x5957;&#x4EF6;Vivado&#x5E94;&#x7528;&#x6307;&#x5357;</li>
+<li>BUFIO I/O&#x7684;&#x672C;&#x5730;&#x65F6;&#x949F;&#x7F13;&#x5B58;</li>
+<li>DCIRESER FPGA&#x914D;&#x7F6E;&#x6210;&#x529F;&#x540E;&#xFF0C;DCI&#x72B6;&#x6001;&#x673A;&#x7684;&#x590D;&#x4F4D;&#x4FE1;&#x53F7;</li>
+<li>IBUF &#x6807;&#x51C6;&#x548C;&#x5BB9;&#x91CF;&#x53EF;&#x9009;&#x62E9;I/O&#x5355;&#x7AEF;&#x53E3;&#x8F93;&#x5165;&#x7F13;&#x5B58;</li>
+<li>IBUFDS &#x5E26;&#x53EF;&#x9009;&#x62E9;&#x7AEF;&#x53E3;&#x7684;&#x5DEE;&#x5206;&#x4FE1;&#x53F7;&#x8F93;&#x5165;&#x7F13;&#x5B58;</li>
+<li>IBUFG &#x5E26;&#x53EF;&#x9009;&#x62E9;&#x7AEF;&#x53E3;&#x7684;&#x4E13;&#x7528;&#x8F93;&#x5165;&#x7F13;&#x5B58;</li>
+<li>IBUFGDS &#x5E26;&#x53EF;&#x9009;&#x62E9;&#x7AEF;&#x53E3;&#x7684;&#x4E13;&#x7528;&#x5DEE;&#x5206;&#x4FE1;&#x53F7;&#x8F93;&#x5165;&#x7F13;&#x5B58;</li>
+<li>IDDR &#x7528;&#x4E8E;&#x63A5;&#x6536;&#x5916;&#x90E8;DDR&#x8F93;&#x5165;&#x4FE1;&#x53F7;&#x7684;&#x4E13;&#x7528;&#x8F93;&#x5165;&#x5BC4;&#x5B58;&#x5668;</li>
+<li>IDELAY &#x4E13;&#x7528;&#x7684;&#x53EF;&#x53D8;&#x62BD;&#x5934;&#x8F93;&#x5165;&#x5EF6;&#x8FDF;&#x94FE;</li>
+<li>IDELAYCTRL IDELAY&#x62BD;&#x5934;&#x6570;&#x7684;&#x63A7;&#x5236;&#x6A21;&#x5757;</li>
+<li>IOBUF &#x5E26;&#x53EF;&#x9009;&#x62E9;&#x7AEF;&#x53E3;&#x7684;&#x53CC;&#x5411;&#x7F13;&#x5B58;</li>
+<li>IOBUFDS &#x4F4E;&#x6709;&#x6548;&#x8F93;&#x51FA;&#x7684;&#x4E09;&#x6001;&#x5DEE;&#x5206;&#x4FE1;&#x53F7;I/O&#x7F13;&#x5B58;</li>
+<li>ISERDES &#x4E13;&#x7528;I/O&#x7F13;&#x5B58;&#x7684;&#x8F93;&#x5165;&#x5206;&#x89E3;&#x5668;</li>
+<li>KEEPER KEEPER&#x7B26;&#x53F7;</li>
+<li>OBUF &#x5355;&#x7AEF;&#x8F93;&#x51FA;&#x7AEF;&#x53E3;&#x7F13;&#x5B58;</li>
+<li>OBUFT &#x5E26;&#x53EF;&#x9009;&#x62E9;&#x7AEF;&#x53E3;&#x7684;&#x4F4E;&#x6709;&#x6548;&#x8F93;&#x51FA;&#x7684;&#x4E09;&#x6001;&#x8F93;&#x51FA;&#x7F13;&#x51B2;</li>
+<li>OBUFDS &#x5E26;&#x53EF;&#x9009;&#x62E9;&#x7AEF;&#x53E3;&#x7684;&#x5DEE;&#x5206;&#x4FE1;&#x53F7;&#x8F93;&#x51FA;&#x7F13;&#x51B2;</li>
+<li>OBUFTDS &#x5E26;&#x53EF;&#x9009;&#x62E9;&#x7AEF;&#x53E3;&#x7684;&#x4F4E;&#x6709;&#x6548;&#x8F93;&#x51FA;&#x7684;&#x4E09;&#x6001;&#x5DEE;&#x5206;&#x8F93;&#x51FA;&#x7F13;&#x51B2;</li>
+<li>ODDR &#x7528;&#x4E8E;&#x5411;&#x5916;&#x90E8;DDR&#x53D1;&#x9001;&#x4FE1;&#x53F7;&#x7684;&#x4E13;&#x7528;&#x8F93;&#x51FA;&#x5BC4;&#x5B58;&#x5668;</li>
+<li>OSERDES &#x7528;&#x4E8E;&#x5FEB;&#x901F;&#x5B9E;&#x73B0;&#x8F93;&#x5165;&#x6E90;&#x540C;&#x6B65;&#x63A5;&#x53E3;</li>
+<li>PULLDOWN &#x8F93;&#x5165;&#x7AEF;&#x5BC4;&#x5B58;&#x5668;&#x4E0B;&#x62C9;&#x81F3;0</li>
+<li>PULLUP &#x8F93;&#x5165;&#x7AEF;&#x5BC4;&#x5B58;&#x5668;&#x3001;&#x5F00;&#x8DEF;&#x4EE5;&#x53CA;&#x4E09;&#x6001;&#x8F93;&#x51FA;&#x7AEF;&#x53E3;&#x4E0A;&#x62C9;&#x81F3;Vcc</li>
 </ul>
-<!-- README.md ends here -->
+<!-- IO.md ends here -->
 
                                 
                                 </section>
@@ -377,12 +397,12 @@
 
             
                 
-                <a href="../XilinxISE/IO.html" class="navigation navigation-prev " aria-label="Previous page: I/O端口组件">
+                <a href="DCMBASE.html" class="navigation navigation-prev " aria-label="Previous page: 基本数字时钟管理模块">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../VHDLGrammar/" class="navigation navigation-next " aria-label="Next page: VHDL语法">
+                <a href="../XilinxVivado/" class="navigation navigation-next " aria-label="Next page: Xilinx Vivado">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -393,7 +413,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Xilinx Vivado","level":"1.6","depth":1,"next":{"title":"VHDL语法","level":"1.7","depth":1,"path":"VHDLGrammar/README.md","ref":"VHDLGrammar/README.md","articles":[{"title":"语言要素","level":"1.7.1","depth":2,"path":"VHDLGrammar/LinguisticElements.md","ref":"VHDLGrammar/LinguisticElements.md","articles":[]},{"title":"表达式","level":"1.7.2","depth":2,"path":"VHDLGrammar/Expression.md","ref":"VHDLGrammar/Expression.md","articles":[]}]},"previous":{"title":"I/O端口组件","level":"1.5.3","depth":2,"path":"XilinxISE/IO.md","ref":"XilinxISE/IO.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"XilinxVivado/README.md","mtime":"2017-08-13T11:02:18.078Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-16T12:59:16.077Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"I/O端口组件","level":"1.5.3","depth":2,"next":{"title":"Xilinx Vivado","level":"1.6","depth":1,"path":"XilinxVivado/README.md","ref":"XilinxVivado/README.md","articles":[]},"previous":{"title":"基本数字时钟管理模块","level":"1.5.2","depth":2,"path":"XilinxISE/DCMBASE.md","ref":"XilinxISE/DCMBASE.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"XilinxISE/IO.md","mtime":"2017-08-16T12:38:18.476Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-16T12:59:16.077Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
