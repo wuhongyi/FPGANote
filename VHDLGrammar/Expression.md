@@ -4,9 +4,9 @@
 ;; Author: Hongyi Wu(吴鸿毅)
 ;; Email: wuhongyi@qq.com 
 ;; Created: 六 7月 29 00:43:07 2017 (+0800)
-;; Last-Updated: 六 7月 29 00:54:21 2017 (+0800)
+;; Last-Updated: 三 8月 30 20:58:10 2017 (+0800)
 ;;           By: Hongyi Wu(吴鸿毅)
-;;     Update #: 1
+;;     Update #: 3
 ;; URL: http://wuhongyi.cn -->
 
 # 表达式
@@ -25,7 +25,7 @@
 
 逻辑运算可操作的数据类型：  
 - bit/std_logic
-- bit_vector/std_logic_vector
+- bit\_vector/std\_logic\_vector
 - boolean
 
 
@@ -36,8 +36,8 @@
 - /=(不等于)
 - <(小于)
 - <=(小于等于)
-- >(大于)
-- >=(大于等于)
+- \>(大于)
+- \>=(大于等于)
 
 
 

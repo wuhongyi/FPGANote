@@ -4,9 +4,9 @@
 ;; Author: Hongyi Wu(吴鸿毅)
 ;; Email: wuhongyi@qq.com 
 ;; Created: 五 7月 28 16:36:00 2017 (+0800)
-;; Last-Updated: 日 8月 13 20:34:48 2017 (+0800)
+;; Last-Updated: 三 8月 30 20:57:26 2017 (+0800)
 ;;           By: Hongyi Wu(吴鸿毅)
-;;     Update #: 6
+;;     Update #: 7
 ;; URL: http://wuhongyi.cn -->
 
 # README
@@ -19,7 +19,8 @@
 
 
 [VHDL硬件描述语言与和数字逻辑电路设计_侯伯亭顾新](http://wuhongyi.cn/FPGANote/pdf/VHDL/VHDL硬件描述语言与和数字逻辑电路设计_侯伯亭顾新.pdf)  
-[VHDL硬件描述语言与数字逻辑电路设计第三版](http://wuhongyi.cn/FPGANote/pdf/VHDL/VHDL硬件描述语言与数字逻辑电路设计第三版.pdf)
+[VHDL硬件描述语言与数字逻辑电路设计第三版](http://wuhongyi.cn/FPGANote/pdf/VHDL/VHDL硬件描述语言与数字逻辑电路设计第三版.pdf)  
+[VHDL语言100例详解](http://wuhongyi.cn/FPGANote/pdf/VHDL/VHDL语言100例详解.pdf)
 
 ----
 
