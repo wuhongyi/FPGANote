@@ -4,9 +4,9 @@
 ;; Author: Hongyi Wu(吴鸿毅)
 ;; Email: wuhongyi@qq.com 
 ;; Created: 五 7月 28 16:36:00 2017 (+0800)
-;; Last-Updated: 一 1月 22 17:16:11 2018 (+0800)
+;; Last-Updated: 三 2月  7 00:01:42 2018 (+0800)
 ;;           By: Hongyi Wu(吴鸿毅)
-;;     Update #: 8
+;;     Update #: 10
 ;; URL: http://wuhongyi.cn -->
 
 # README
@@ -26,6 +26,17 @@
 - [VHDL设计表示和综合](http://wuhongyi.cn/FPGANote/pdf/VHDL/VHDL设计表示和综合.pdf)
 - [VHDL数字电子学](http://wuhongyi.cn/FPGANote/pdf/VHDL/VHDL数字电子学.pdf)
 - [](http://wuhongyi.cn/FPGANote/pdf/VHDL/)
+
+
+参考网站：
+
+- [VHDL Tutorial: Learn by Example](http://esd.cs.ucr.edu/labs/tutorial/)
+- [VHDL reference material](https://www.csee.umbc.edu/portal/help/VHDL/)
+- [nandland 卖开发板](https://www.nandland.com/)
+- [surf-vhdl](http://surf-vhdl.com/)
+
+
+
 
 ----
 
