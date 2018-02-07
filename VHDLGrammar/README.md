@@ -4,9 +4,9 @@
 ;; Author: Hongyi Wu(吴鸿毅)
 ;; Email: wuhongyi@qq.com 
 ;; Created: 五 7月 28 16:36:00 2017 (+0800)
-;; Last-Updated: 三 2月  7 00:01:42 2018 (+0800)
+;; Last-Updated: 四 2月  8 00:03:49 2018 (+0800)
 ;;           By: Hongyi Wu(吴鸿毅)
-;;     Update #: 10
+;;     Update #: 11
 ;; URL: http://wuhongyi.cn -->
 
 # README
@@ -36,7 +36,7 @@
 - [surf-vhdl](http://surf-vhdl.com/)
 
 
-
+[VHDL Simulation of Trapezoidal Filter for Digital Nuclear Spectroscopy systems](http://wuhongyi.cn/FPGANote/pdf/VHDL/VHDL Simulation of Trapezoidal Filter for Digital Nuclear Spectroscopy systems.pdf)
 
 ----
 
