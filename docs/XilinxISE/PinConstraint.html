@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <title>管脚约束 · GitBook</title>
+        <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="GitBook 3.2.0">
         
         
         
@@ -370,25 +370,21 @@
 ;;           By: Hongyi Wu(吴鸿毅)
 ;;     Update #: 1
 ;; URL: http://wuhongyi.cn -->
-<h1 id="&#x7BA1;&#x811A;&#x7EA6;&#x675F;">&#x7BA1;&#x811A;&#x7EA6;&#x675F;</h1>
-<p>&#x5728;ISE&#x4E2D;&#xFF0C;&#x6253;&#x5F00;User Constraints&#x4E2D;&#x7684;Assign Package Pins&#x5C31;&#x53EF;&#x4EE5;&#x5BF9;&#x8BBE;&#x5B9A;&#x7684;&#x7BA1;&#x811A;&#x8FDB;&#x884C;&#x7EA6;&#x675F;&#x3002;</p>
-<p>&#x6253;&#x5F00;&#x4E86;Xilinx PACK-[Design Object List-I/O Pin]</p>
-<p>&#x5176;&#x4E2D;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#x5982;&#x4E0B;</p>
-<ul>
-<li>I/O Name &#x2014;&#x2014;IO&#x7BA1;&#x811A;&#x540D;&#x79F0;&#xFF0C;&#x5BF9;&#x5E94;&#x4E8E;module&#x91CC;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x7BA1;&#x811A;&#x3002; I/O Direction&#x2014;&#x2014;&#x8BBE;&#x5B9A;&#x8F93;&#x5165;(Input)&#x8FD8;&#x662F;&#x8F93;&#x51FA;&#xFF08;Output&#xFF09;&#x7BA1;&#x811A;&#x3002;</li>
-<li>Loc&#x2014;&#x2014;&#x4F4D;&#x4E8E;&#x82AF;&#x7247;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</li>
-<li>Bank&#x2014;&#x2014;&#x7BA1;&#x811A;&#x4F4D;&#x4E8E;&#x7684;Bank&#x5757;&#xFF0C;&#x5F53;&#x6307;&#x5B9A;&#x4E86;Loc&#x540E;&#xFF0C;bank&#x4E5F;&#x5C31;&#x786E;&#x5B9A;&#x4E86;&#x3002;</li>
-<li>FROM:Spartan-3E FPGA &#x7CFB;&#x5217;&#x6570;&#x636E;&#x624B;&#x518C; P19</li>
-<li>I/O Std.&#x2014;&#x2014;I/O&#x7BA1;&#x811A;&#x7684;&#x7535;&#x5E73;&#x6807;&#x51C6;&#x3002;</li>
-</ul>
-<p>&#x6BCF;&#x4E2A;bank&#x90FD;&#x53EF;&#x4EE5;&#x968F;&#x610F;&#x8BBE;&#x7F6E;&#x4E3A;&#x8BE5;&#x5668;&#x4EF6;&#x652F;&#x6301;&#x7684;&#x7535;&#x5E73;&#x6807;&#x51C6;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x7535;&#x5E73;&#x6807;&#x51C6;&#x5728;&#x4E00;&#x4E2A;bank&#x4E2D;&#x8981;&#x6CE8;&#x610F;&#x5B83;&#x4EEC;&#x7684;&#x7535;&#x5E73;&#x8981;&#x4E00;&#x81F4;&#xFF0C;&#x6BD4;&#x5982;&#x90FD;&#x4E3A;3.3v&#xFF0C;&#x7535;&#x5E73;&#x53EF;&#x4EE5;&#x4E3A;LVTTL&#x3001;LVCOMS33&#x3002;</p>
-<p>From:Spartan-3E FPGA &#x7CFB;&#x5217;&#x6570;&#x636E;&#x624B;&#x518C; P16~17</p>
-<hr>
-<hr>
-<blockquote>
-<p><a href="http://3y.uu456.com/bp_0ig5p4dbzq667gj1z1nm_1.html" target="_blank">http://3y.uu456.com/bp_0ig5p4dbzq667gj1z1nm_1.html</a></p>
-</blockquote>
-<!-- PinConstraint.md ends here -->
+
+
+<h1 id="&#x7BA1;&#x811A;&#x7EA6;&#x675F;">&#x7BA1;&#x811A;&#x7EA6;&#x675F;</h1><p>&#x5728;ISE&#x4E2D;&#xFF0C;&#x6253;&#x5F00;User Constraints&#x4E2D;&#x7684;Assign Package Pins&#x5C31;&#x53EF;&#x4EE5;&#x5BF9;&#x8BBE;&#x5B9A;&#x7684;&#x7BA1;&#x811A;&#x8FDB;&#x884C;&#x7EA6;&#x675F;&#x3002;</p><p>&#x6253;&#x5F00;&#x4E86;Xilinx PACK-[Design Object List-I/O Pin]</p><p>&#x5176;&#x4E2D;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#x5982;&#x4E0B;</p><ul><li>I/O Name &#x2014;&#x2014;IO&#x7BA1;&#x811A;&#x540D;&#x79F0;&#xFF0C;&#x5BF9;&#x5E94;&#x4E8E;module&#x91CC;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x7BA1;&#x811A;&#x3002; I/O Direction&#x2014;&#x2014;&#x8BBE;&#x5B9A;&#x8F93;&#x5165;(Input)&#x8FD8;&#x662F;&#x8F93;&#x51FA;&#xFF08;Output&#xFF09;&#x7BA1;&#x811A;&#x3002;
+</li>
+<li>Loc&#x2014;&#x2014;&#x4F4D;&#x4E8E;&#x82AF;&#x7247;&#x7684;&#x4F4D;&#x7F6E;&#x3002;
+</li>
+<li>Bank&#x2014;&#x2014;&#x7BA1;&#x811A;&#x4F4D;&#x4E8E;&#x7684;Bank&#x5757;&#xFF0C;&#x5F53;&#x6307;&#x5B9A;&#x4E86;Loc&#x540E;&#xFF0C;bank&#x4E5F;&#x5C31;&#x786E;&#x5B9A;&#x4E86;&#x3002;
+</li>
+<li>FROM:Spartan-3E FPGA &#x7CFB;&#x5217;&#x6570;&#x636E;&#x624B;&#x518C; P19
+</li>
+<li>I/O Std.&#x2014;&#x2014;I/O&#x7BA1;&#x811A;&#x7684;&#x7535;&#x5E73;&#x6807;&#x51C6;&#x3002;
+</li></ul>
+<p>&#x6BCF;&#x4E2A;bank&#x90FD;&#x53EF;&#x4EE5;&#x968F;&#x610F;&#x8BBE;&#x7F6E;&#x4E3A;&#x8BE5;&#x5668;&#x4EF6;&#x652F;&#x6301;&#x7684;&#x7535;&#x5E73;&#x6807;&#x51C6;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x7535;&#x5E73;&#x6807;&#x51C6;&#x5728;&#x4E00;&#x4E2A;bank&#x4E2D;&#x8981;&#x6CE8;&#x610F;&#x5B83;&#x4EEC;&#x7684;&#x7535;&#x5E73;&#x8981;&#x4E00;&#x81F4;&#xFF0C;&#x6BD4;&#x5982;&#x90FD;&#x4E3A;3.3v&#xFF0C;&#x7535;&#x5E73;&#x53EF;&#x4EE5;&#x4E3A;LVTTL&#x3001;LVCOMS33&#x3002;</p><p>From:Spartan-3E FPGA &#x7CFB;&#x5217;&#x6570;&#x636E;&#x624B;&#x518C; P16~17</p><hr><hr><blockquote><p><a href="http://3y.uu456.com/bp_0ig5p4dbzq667gj1z1nm_1.html" target="_blank">http://3y.uu456.com/bp_0ig5p4dbzq667gj1z1nm_1.html</a></p></blockquote><!-- PinConstraint.md ends here -->
+
+
 
                                 
                                 </section>
@@ -432,7 +428,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"管脚约束","level":"1.5.1","depth":2,"next":{"title":"基本数字时钟管理模块","level":"1.5.2","depth":2,"path":"XilinxISE/DCMBASE.md","ref":"XilinxISE/DCMBASE.md","articles":[]},"previous":{"title":"Xilinx ISE","level":"1.5","depth":1,"path":"XilinxISE/README.md","ref":"XilinxISE/README.md","articles":[{"title":"管脚约束","level":"1.5.1","depth":2,"path":"XilinxISE/PinConstraint.md","ref":"XilinxISE/PinConstraint.md","articles":[]},{"title":"基本数字时钟管理模块","level":"1.5.2","depth":2,"path":"XilinxISE/DCMBASE.md","ref":"XilinxISE/DCMBASE.md","articles":[]},{"title":"I/O端口组件","level":"1.5.3","depth":2,"path":"XilinxISE/IO.md","ref":"XilinxISE/IO.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"XilinxISE/PinConstraint.md","mtime":"2017-07-30T10:55:24.335Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-03-06T14:35:49.618Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"管脚约束","level":"1.5.1","depth":2,"next":{"title":"基本数字时钟管理模块","level":"1.5.2","depth":2,"path":"XilinxISE/DCMBASE.md","ref":"XilinxISE/DCMBASE.md","articles":[]},"previous":{"title":"Xilinx ISE","level":"1.5","depth":1,"path":"XilinxISE/README.md","ref":"XilinxISE/README.md","articles":[{"title":"管脚约束","level":"1.5.1","depth":2,"path":"XilinxISE/PinConstraint.md","ref":"XilinxISE/PinConstraint.md","articles":[]},{"title":"基本数字时钟管理模块","level":"1.5.2","depth":2,"path":"XilinxISE/DCMBASE.md","ref":"XilinxISE/DCMBASE.md","articles":[]},{"title":"I/O端口组件","level":"1.5.3","depth":2,"path":"XilinxISE/IO.md","ref":"XilinxISE/IO.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"XilinxISE/PinConstraint.md","mtime":"2018-05-14T09:21:58.640Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-06-08T21:50:44.124Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
