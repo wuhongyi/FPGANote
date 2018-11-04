@@ -526,40 +526,346 @@
 ;; Author: Hongyi Wu(吴鸿毅)
 ;; Email: wuhongyi@qq.com 
 ;; Created: 日 11月  4 16:34:31 2018 (+0800)
-;; Last-Updated: 日 11月  4 16:51:34 2018 (+0800)
+;; Last-Updated: 日 11月  4 20:57:21 2018 (+0800)
 ;;           By: Hongyi Wu(吴鸿毅)
-;;     Update #: 2
+;;     Update #: 8
 ;; URL: http://wuhongyi.cn -->
 <h1 id="xilinx"><a name="xilinx" class="plugin-anchor" href="#xilinx"><i class="fa fa-link" aria-hidden="true"></i></a>Xilinx</h1>
 <!-- toc -->
 <ul>
 <li><a href="#&#x8BA1;&#x7B97;&#x7EC4;&#x4EF6;">&#x8BA1;&#x7B97;&#x7EC4;&#x4EF6;</a></li>
-<li><a href="#io&#x7AEF;&#x53E3;&#x7EC4;&#x4EF6;">I/O&#x7AEF;&#x53E3;&#x7EC4;&#x4EF6;</a></li>
-<li><a href="#&#x5BC4;&#x5B58;&#x5668;&#x548C;&#x9501;&#x5B58;&#x5668;">&#x5BC4;&#x5B58;&#x5668;&#x548C;&#x9501;&#x5B58;&#x5668;</a></li>
-<li><a href="#&#x65F6;&#x949F;&#x7EC4;&#x4EF6;">&#x65F6;&#x949F;&#x7EC4;&#x4EF6;</a></li>
+<li><a href="#io&#x7AEF;&#x53E3;&#x7EC4;&#x4EF6;">I/O&#x7AEF;&#x53E3;&#x7EC4;&#x4EF6;</a><ul>
+<li><a href="#ibufds">IBUFDS</a></li>
+<li><a href="#obufds">OBUFDS</a></li>
+<li><a href="#iobuf">IOBUF</a></li>
+<li><a href="#pulldown-&#x548C;-pullup">PULLDOWN &#x548C; PULLUP</a></li>
+</ul>
+</li>
+<li><a href="#&#x5BC4;&#x5B58;&#x5668;&#x548C;&#x9501;&#x5B58;&#x5668;">&#x5BC4;&#x5B58;&#x5668;&#x548C;&#x9501;&#x5B58;&#x5668;</a><ul>
+<li><a href="#fdcpe">FDCPE</a></li>
+</ul>
+</li>
+<li><a href="#&#x65F6;&#x949F;&#x7EC4;&#x4EF6;">&#x65F6;&#x949F;&#x7EC4;&#x4EF6;</a><ul>
+<li><a href="#bufg">BUFG</a></li>
+<li><a href="#bufmux">BUFMUX</a></li>
+<li><a href="#bufio">BUFIO</a></li>
+<li><a href="#bufr">BUFR</a></li>
+</ul>
+</li>
 <li><a href="#&#x5904;&#x7406;&#x5668;&#x7EC4;&#x4EF6;">&#x5904;&#x7406;&#x5668;&#x7EC4;&#x4EF6;</a></li>
-<li><a href="#&#x79FB;&#x4F4D;&#x5BC4;&#x5B58;&#x5668;">&#x79FB;&#x4F4D;&#x5BC4;&#x5B58;&#x5668;</a></li>
+<li><a href="#&#x79FB;&#x4F4D;&#x5BC4;&#x5B58;&#x5668;">&#x79FB;&#x4F4D;&#x5BC4;&#x5B58;&#x5668;</a><ul>
+<li><a href="#srl16">SRL16</a></li>
+</ul>
+</li>
 <li><a href="#&#x914D;&#x7F6E;&#x548C;&#x68C0;&#x6D4B;&#x7EC4;&#x4EF6;">&#x914D;&#x7F6E;&#x548C;&#x68C0;&#x6D4B;&#x7EC4;&#x4EF6;</a></li>
-<li><a href="#ramrom&#x7EC4;&#x4EF6;">RAM/ROM&#x7EC4;&#x4EF6;</a></li>
+<li><a href="#ramrom&#x7EC4;&#x4EF6;">RAM/ROM&#x7EC4;&#x4EF6;</a><ul>
+<li><a href="#ram16x1s">RAM16X1S</a></li>
+</ul>
+</li>
 <li><a href="#sliceclb&#x7EC4;&#x4EF6;">Slice/CLB&#x7EC4;&#x4EF6;</a></li>
 <li><a href="#g&#x6BD4;&#x7279;&#x6536;&#x53D1;&#x5668;&#x7EC4;&#x4EF6;">G&#x6BD4;&#x7279;&#x6536;&#x53D1;&#x5668;&#x7EC4;&#x4EF6;</a></li>
 </ul>
 <!-- tocstop -->
 <p>Xilinx&#x516C;&#x53F8;&#x7684;&#x539F;&#x8BED;&#x6309;&#x7167;&#x529F;&#x80FD;&#x5206;&#x4E3A;10&#x7C7B;&#xFF0C;&#x5305;&#x62EC;&#xFF1A;&#x8BA1;&#x7B97;&#x7EC4;&#x4EF6;&#x3001;I/O&#x7AEF;&#x53E3;&#x7EC4;&#x4EF6;&#x3001;&#x5BC4;&#x5B58;&#x5668;&#x548C;&#x9501;&#x5B58;&#x5668;&#x3001;&#x65F6;&#x949F;&#x7EC4;&#x4EF6;&#x3001;&#x5904;&#x7406;&#x5668;&#x7EC4;&#x4EF6;&#x3001;&#x79FB;&#x4F4D;&#x5BC4;&#x5B58;&#x5668;&#x3001;&#x914D;&#x7F6E;&#x548C;&#x68C0;&#x6D4B;&#x7EC4;&#x4EF6;&#x3001;RAM/ROM&#x7EC4;&#x4EF6;&#x3001;Slice/CLB&#x7EC4;&#x4EF6;&#x4EE5;&#x53CA;G&#x6BD4;&#x7279;&#x6536;&#x53D1;&#x5668;&#x7EC4;&#x4EF6;&#x3002;</p>
 <h2 id="&#x8BA1;&#x7B97;&#x7EC4;&#x4EF6;"><a name="&#x8BA1;&#x7B97;&#x7EC4;&#x4EF6;" class="plugin-anchor" href="#&#x8BA1;&#x7B97;&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BA1;&#x7B97;&#x7EC4;&#x4EF6;</h2>
+<p>&#x8BA1;&#x7B97;&#x7EC4;&#x4EF6;&#x6307;&#x7684;&#x5C31;&#x662F;DSP48&#x6838;&#xFF0C;&#x4E5F;&#x6709;&#x4EBA;&#x5C06;&#x5176;&#x79F0;&#x4E3A;&#x786C;&#x4EF6;&#x4E58;&#x6CD5;&#x5668;</p>
 <h2 id="io&#x7AEF;&#x53E3;&#x7EC4;&#x4EF6;"><a name="io&#x7AEF;&#x53E3;&#x7EC4;&#x4EF6;" class="plugin-anchor" href="#io&#x7AEF;&#x53E3;&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>I/O&#x7AEF;&#x53E3;&#x7EC4;&#x4EF6;</h2>
+<p>I/O &#x7EC4;&#x4EF6;&#x63D0;&#x4F9B;&#x4E86;&#x672C;&#x5730;&#x65F6;&#x949F;&#x7F13;&#x5B58;&#x3001;&#x6807;&#x51C6;&#x5355;&#x7AEF; I/O &#x7F13;&#x5B58;&#x3001;&#x5DEE;&#x5206; I/O &#x4FE1;&#x53F7;&#x7F13;&#x5B58;&#x3001;DDR &#x4E13;&#x7528; I/O &#x4FE1;&#x53F7;&#x7F13;&#x5B58;&#x3001;&#x53EF;&#x53D8;&#x62BD;&#x5934;&#x5EF6;&#x8FDF;&#x94FE;&#x3001;&#x4E0A;&#x62C9;&#x3001;&#x4E0B;&#x62C9;&#x4EE5;&#x53CA;&#x5355;&#x7AEF;&#x4FE1;&#x53F7;&#x548C;&#x5DEE;&#x5206;&#x4FE1;&#x53F7;&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x4E92;&#x8F6C;&#x6362;</p>
+<ul>
+<li>BUFIO I/O&#x7684;&#x672C;&#x5730;&#x65F6;&#x949F;&#x7F13;&#x5B58;</li>
+<li>DCIRESER FPGA&#x914D;&#x7F6E;&#x6210;&#x529F;&#x540E;DCI&#x72B6;&#x6001;&#x673A;&#x7684;&#x590D;&#x4F4D;&#x4FE1;&#x53F7;</li>
+<li>IBUF &#x6807;&#x51C6;&#x5BB9;&#x91CF;&#x53EF;&#x9009;&#x62E9;I/O&#x5355;&#x7AEF;&#x53E3;&#x8F93;&#x5165;&#x7F13;&#x5B58;</li>
+<li>IBUFDS &#x5E26;&#x53EF;&#x9009;&#x62E9;&#x7AEF;&#x53E3;&#x7684;&#x5DEE;&#x5206;&#x4FE1;&#x53F7;&#x8F93;&#x5165;&#x7F13;&#x5B58;</li>
+<li>IBUFG &#x5E26;&#x53EF;&#x9009;&#x62E9;&#x7AEF;&#x53E3;&#x7684;&#x4E13;&#x7528;&#x8F93;&#x5165;&#x7F13;&#x5B58;</li>
+<li>IBUFGDS &#x5E26;&#x53EF;&#x9009;&#x62E9;&#x7AEF;&#x53E3;&#x7684;&#x4E13;&#x7528;&#x5DEE;&#x5206;&#x4FE1;&#x53F7;&#x8F93;&#x5165;&#x7F13;&#x5B58;</li>
+<li>IDDR &#x7528;&#x4E8E;&#x63A5;&#x6536;&#x5916;&#x90E8;DDR&#x8F93;&#x5165;&#x4FE1;&#x53F7;&#x7684;&#x4E13;&#x7528;&#x8F93;&#x5165;&#x5BC4;&#x5B58;&#x5668;</li>
+<li>IDELAY &#x4E13;&#x7528;&#x7684;&#x53EF;&#x53D8;&#x62BD;&#x5934;&#x8F93;&#x5165;&#x5EF6;&#x8FDF;&#x94FE;</li>
+<li>IDELAYCTRL IDELAY&#x62BD;&#x5934;&#x6570;&#x7684;&#x63A7;&#x5236;&#x6A21;&#x5757;</li>
+<li>IOBUF &#x5E26;&#x53EF;&#x9009;&#x62E9;&#x7AEF;&#x53E3;&#x7684;&#x53CC;&#x5411;&#x7F13;&#x5B58;</li>
+<li>IOBUFDS &#x4F4E;&#x6709;&#x6548;&#x8F93;&#x51FA;&#x7684;&#x4E09;&#x6001;&#x5DEE;&#x5206;&#x4FE1;&#x53F7;I/O&#x7F13;&#x5B58;</li>
+<li>ISERDES &#x4E13;&#x7528;I/O&#x7F13;&#x5B58;&#x7684;&#x8F93;&#x5165;&#x5206;&#x89E3;&#x5668;</li>
+<li>KEEPER KEEPER&#x7B26;&#x53F7;</li>
+<li>OBUF &#x5355;&#x7AEF;&#x8F93;&#x51FA;&#x7AEF;&#x53E3;&#x7F13;&#x5B58;</li>
+<li>OBUFT &#x5E26;&#x53EF;&#x9009;&#x62E9;&#x7AEF;&#x53E3;&#x7684;&#x4F4E;&#x6709;&#x6548;&#x8F93;&#x51FA;&#x7684;&#x4E09;&#x6001;&#x8F93;&#x51FA;&#x7F13;&#x51B2;</li>
+<li>OBUFDS &#x5E26;&#x53EF;&#x9009;&#x62E9;&#x7AEF;&#x53E3;&#x7684;&#x5DEE;&#x5206;&#x4FE1;&#x53F7;&#x8F93;&#x51FA;&#x7F13;&#x51B2;</li>
+<li>OBUFTDS &#x5E26;&#x53EF;&#x9009;&#x62E9;&#x7AEF;&#x53E3;&#x7684;&#x4F4E;&#x6709;&#x6548;&#x8F93;&#x51FA;&#x7684;&#x4E09;&#x6001;&#x5DEE;&#x5206;&#x8F93;&#x51FA;&#x7F13;&#x51B2;</li>
+<li>ODDR &#x7528;&#x4E8E;&#x5411;&#x5916;&#x90E8;DDR&#x53D1;&#x9001;&#x4FE1;&#x53F7;&#x7684;&#x4E13;&#x7528;&#x8F93;&#x51FA;&#x5BC4;&#x5B58;&#x5668;</li>
+<li>OSERDES &#x7528;&#x4E8E;&#x5FEB;&#x901F;&#x5B9E;&#x73B0;&#x8F93;&#x5165;&#x6E90;&#x540C;&#x6B65;&#x63A5;&#x53E3;</li>
+<li>PULLDOWN &#x8F93;&#x5165;&#x7AEF;&#x5BC4;&#x5B58;&#x5668;&#x4E0B;&#x62C9;&#x81F3;0</li>
+<li>PULLUP &#x8F93;&#x5165;&#x7AEF;&#x5BC4;&#x5B58;&#x5668;&#x3001;&#x5F00;&#x8DEF;&#x4EE5;&#x53CA;&#x4E09;&#x6001;&#x8F93;&#x51FA;&#x7AEF;&#x53E3;&#x4E0A;&#x62C9;&#x81F3;VCC</li>
+</ul>
+<h3 id="ibufds"><a name="ibufds" class="plugin-anchor" href="#ibufds"><i class="fa fa-link" aria-hidden="true"></i></a>IBUFDS</h3>
+<p>IBUFDS &#x539F;&#x8BED;&#x7528;&#x4E8E;&#x5C06;&#x5DEE;&#x5206;&#x8F93;&#x5165;&#x4FE1;&#x53F7;&#x8F6C;&#x5316;&#x6210;&#x6807;&#x51C6;&#x5355;&#x7AEF;&#x4FE1;&#x53F7;&#xFF0C;&#x4E14;&#x53EF;&#x52A0;&#x5165;&#x53EF;&#x9009;&#x5EF6;&#x8FDF;&#x3002;&#x5728; IBUFDS &#x539F;&#x8BED;&#x4E2D;&#xFF0C;&#x8F93;&#x5165;&#x4FE1;&#x53F7;&#x4E3A; I&#x3001;IB&#xFF0C;&#x4E00;&#x4E2A;&#x4E3A;&#x4E3B;&#xFF0C;&#x4E00;&#x4E2A;&#x4E3A;&#x4ECE;&#xFF0C;&#x4E8C;&#x8005;&#x76F8;&#x4F4D;&#x76F8;&#x53CD;&#x3002;</p>
+<pre><code class="lang-verilog"><span class="hljs-comment">// IBUFDS: &#x5DEE;&#x5206;&#x8F93;&#x5165;&#x7F13;&#x51B2;&#x5668;&#xFF08;Differential Input Buffer&#xFF09;</span>
+<span class="hljs-comment">// &#x9002;&#x7528;&#x82AF;&#x7247;&#xFF1A;Virtex-II/II-Pro/4, Spartan-3/3E</span>
+IBUFDS #(
+<span class="hljs-variable">.DIFF_TERM</span>(<span class="hljs-string">&quot;FALSE&quot;</span>),
+<span class="hljs-comment">// &#x5DEE;&#x5206;&#x7EC8;&#x7AEF;&#xFF0C;&#x53EA;&#x6709; Virtex-4 &#x7CFB;&#x5217;&#x82AF;&#x7247;&#x624D;&#x6709;&#xFF0C;&#x53EF;&#x8BBE;&#x7F6E;&#x4E3A; True/Flase</span>
+<span class="hljs-variable">.IOSTANDARD</span>(<span class="hljs-string">&quot;DEFAULT&quot;</span>)
+<span class="hljs-comment">// &#x6307;&#x5B9A;&#x8F93;&#x5165;&#x7AEF;&#x53E3;&#x7684;&#x7535;&#x5E73;&#x6807;&#x51C6;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x786E;&#x5B9A;&#xFF0C;&#x53EF;&#x8BBE;&#x4E3A; DEFAULT</span>
+) IBUFDS_inst (
+<span class="hljs-variable">.O</span>(O), <span class="hljs-comment">// &#x65F6;&#x949F;&#x7F13;&#x51B2;&#x8F93;&#x51FA;</span>
+<span class="hljs-variable">.I</span>(I), <span class="hljs-comment">// &#x5DEE;&#x5206;&#x65F6;&#x949F;&#x7684;&#x6B63;&#x7AEF;&#x8F93;&#x5165;&#xFF0C;&#x9700;&#x8981;&#x548C;&#x9876;&#x5C42;&#x6A21;&#x5757;&#x7684;&#x7AEF;&#x53E3;&#x76F4;&#x63A5;&#x8FDE;&#x63A5; </span>
+<span class="hljs-variable">.IB</span>(IB) <span class="hljs-comment">// &#x5DEE;&#x5206;&#x65F6;&#x949F;&#x7684;&#x8D1F;&#x7AEF;&#x8F93;&#x5165;&#xFF0C;&#x9700;&#x8981;&#x548C;&#x9876;&#x5C42;&#x6A21;&#x5757;&#x7684;&#x7AEF;&#x53E3;&#x76F4;&#x63A5;&#x8FDE;&#x63A5;</span>
+);
+<span class="hljs-comment">// &#x7ED3;&#x675F; IBUFDS &#x6A21;&#x5757;&#x7684;&#x4F8B;&#x5316;&#x8FC7;&#x7A0B;</span>
+</code></pre>
+<h3 id="obufds"><a name="obufds" class="plugin-anchor" href="#obufds"><i class="fa fa-link" aria-hidden="true"></i></a>OBUFDS</h3>
+<p>OBUFDS &#x5C06;&#x6807;&#x51C6;&#x5355;&#x7AEF;&#x4FE1;&#x53F7;&#x8F6C;&#x6362;&#x6210;&#x5DEE;&#x5206;&#x4FE1;&#x53F7;&#xFF0C;&#x8F93;&#x51FA;&#x7AEF;&#x53E3;&#x9700;&#x8981;&#x76F4;&#x63A5;&#x5BF9;&#x5E94;&#x5230;&#x9876;&#x5C42;&#x6A21;&#x5757;&#x7684;&#x8F93;&#x51FA;&#x4FE1;&#x53F7;&#xFF0C;&#x548C; IBUFDS &#x4E3A;&#x4E00;&#x5BF9;&#x4E92;&#x9006;&#x64CD;&#x4F5C;&#x3002;</p>
+<pre><code class="lang-verilog"><span class="hljs-comment">// OBUFDS: &#x5DEE;&#x5206;&#x8F93;&#x51FA;&#x7F13;&#x51B2;&#x5668;&#xFF08;Differential Output Buffer&#xFF09;</span>
+<span class="hljs-comment">// &#x9002;&#x7528;&#x82AF;&#x7247;&#xFF1A;Virtex-II/II-Pro/4, Spartan-3/3E</span>
+OBUFDS #(
+<span class="hljs-variable">.IOSTANDARD</span>(<span class="hljs-string">&quot;DEFAULT&quot;</span>)
+<span class="hljs-comment">// &#x6307;&#x540D;&#x8F93;&#x51FA;&#x7AEF;&#x53E3;&#x7684;&#x7535;&#x5E73;&#x6807;&#x51C6;</span>
+) OBUFDS_inst (
+<span class="hljs-variable">.O</span>(O), <span class="hljs-comment">// &#x5DEE;&#x5206;&#x6B63;&#x7AEF;&#x8F93;&#x51FA;&#xFF0C;&#x76F4;&#x63A5;&#x8FDE;&#x63A5;&#x5230;&#x9876;&#x5C42;&#x6A21;&#x5757;&#x7AEF;&#x53E3;</span>
+<span class="hljs-variable">.OB</span>(OB), <span class="hljs-comment">// &#x5DEE;&#x5206;&#x8D1F;&#x7AEF;&#x8F93;&#x51FA;&#xFF0C;&#x76F4;&#x63A5;&#x8FDE;&#x63A5;&#x5230;&#x9876;&#x5C42;&#x6A21;&#x5757;&#x7AEF;&#x53E3;</span>
+<span class="hljs-variable">.I</span>(I) <span class="hljs-comment">// &#x7F13;&#x51B2;&#x5668;&#x8F93;&#x5165;</span>
+); 
+<span class="hljs-comment">// &#x7ED3;&#x675F; OBUFDS &#x6A21;&#x5757;&#x7684;&#x4F8B;&#x5316;&#x8FC7;&#x7A0B;</span>
+</code></pre>
+<h3 id="iobuf"><a name="iobuf" class="plugin-anchor" href="#iobuf"><i class="fa fa-link" aria-hidden="true"></i></a>IOBUF</h3>
+<p>IOBUF &#x539F;&#x8BED;&#x662F;&#x5355;&#x7AEF;&#x53CC;&#x5411;&#x7F13;&#x51B2;&#x5668;&#xFF0C;&#x5176; I/O &#x63A5;&#x53E3;&#x5FC5;&#x987B;&#x548C;&#x6307;&#x5B9A;&#x7684;&#x7535;&#x5E73;&#x6807;&#x51C6;&#x76F8;&#x5BF9;&#x5E94;&#xFF0C;&#x652F;&#x6301; LVTTL&#x3001;LVCMOS15&#x3001;LVCMOS18&#x3001;LVCMOS25 &#x4EE5;&#x53CA; LVCMOS33 &#x7B49;&#x4FE1;&#x53F7;&#x6807;&#x51C6;&#xFF0C;&#x540C;&#x65F6;&#x8FD8;&#x53EF;&#x901A;&#x8FC7; DRIVE&#x3001; FAST &#x4EE5;&#x53CA; SLOW &#x7B49;&#x7EA6;&#x675F;&#x6765;&#x6EE1;&#x8DB3;&#x7684;&#x4E0D;&#x540C;&#x9A71;&#x52A8;&#x548C;&#x6296;&#x52A8;&#x901F;&#x7387;&#x7684;&#x9700;&#x6C42;&#x3002;&#x9ED8;&#x8BA4;&#x7684;&#x9A71;&#x52A8;&#x80FD;&#x529B;&#x4E3A; 12mA&#xFF0C;&#x4F4E;&#x6296;&#x52A8;&#x3002;IOBUF &#x7531; IBUF &#x548C; OBUFT &#x4E24;&#x4E2A;&#x57FA;&#x672C;&#x7EC4;&#x4EF6;&#x6784;&#x6210;&#xFF0C;&#x5F53; I/O &#x7AEF;&#x53E3;&#x4E3A;&#x9AD8;&#x963B;&#x65F6;&#xFF0C;&#x5176;&#x8F93;&#x51FA;&#x7AEF;&#x53E3; O &#x4E3A;&#x4E0D;&#x5B9A;&#x6001;&#x3002;IOBUF &#x539F;&#x8BED;&#x7684;&#x529F;&#x80FD;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5176;&#x7EC4;&#x6210;&#x7EC4;&#x4EF6;&#x7684;&#x4E92;&#x8054;&#x6765;&#x5B9E;&#x73B0;&#x3002; </p>
+<pre><code class="lang-verilog"><span class="hljs-comment">// IOBUF: &#x5355;&#x7AEF;&#x53CC;&#x5411;&#x7F13;&#x51B2;&#x5668;&#xFF08;Single-ended Bi-directional Buffer&#xFF09;</span>
+<span class="hljs-comment">// &#x9002;&#x7528;&#x82AF;&#x7247;&#xFF1A;&#x6240;&#x6709;&#x82AF;&#x7247;</span>
+IOBUF #(
+<span class="hljs-variable">.DRIVE</span>(<span class="hljs-number">12</span>),
+<span class="hljs-comment">// &#x6307;&#x5B9A;&#x8F93;&#x51FA;&#x9A71;&#x52A8;&#x7684;&#x5F3A;&#x5EA6;</span>
+<span class="hljs-variable">.IOSTANDARD</span>(<span class="hljs-string">&quot;DEFAULT&quot;</span>),
+<span class="hljs-comment">// &#x6307;&#x5B9A; I/O &#x7535;&#x5E73;&#x7684;&#x6807;&#x51C6;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x82AF;&#x7247;&#x652F;&#x6301;&#x7684;&#x63A5;&#x53E3;&#x7535;&#x5E73;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x6240;&#x4E0D;&#x540C;</span>
+<span class="hljs-variable">.SLEW</span>(<span class="hljs-string">&quot;SLOW&quot;</span>)
+<span class="hljs-comment">// &#x5236;&#x5B9A;&#x8F93;&#x51FA;&#x6296;&#x52A8;&#x901F;&#x7387;</span>
+) IOBUF_inst (
+<span class="hljs-variable">.O</span>(O), <span class="hljs-comment">// &#x7F13;&#x51B2;&#x5668;&#x7684;&#x5355;&#x5143;&#x8F93;&#x51FA;</span>
+<span class="hljs-variable">.IO</span>(IO), <span class="hljs-comment">// &#x7F13;&#x51B2;&#x5668;&#x7684;&#x53CC;&#x5411;&#x8F93;&#x51FA;</span>
+<span class="hljs-variable">.I</span>(I), <span class="hljs-comment">// &#x7F13;&#x51B2;&#x5668;&#x7684;&#x8F93;&#x4EBA; </span>
+<span class="hljs-variable">.T</span>(T) <span class="hljs-comment">// 3 &#x6001;&#x4F7F;&#x80FD;&#x8F93;&#x5165;&#x4FE1;&#x53F7;</span>
+);
+<span class="hljs-comment">// &#x7ED3;&#x675F; IOBUF &#x6A21;&#x5757;&#x7684;&#x4F8B;&#x5316;&#x8FC7;&#x7A0B;</span>
+</code></pre>
+<h3 id="pulldown-&#x548C;-pullup"><a name="pulldown-&#x548C;-pullup" class="plugin-anchor" href="#pulldown-&#x548C;-pullup"><i class="fa fa-link" aria-hidden="true"></i></a>PULLDOWN &#x548C; PULLUP</h3>
+<p>&#x6570;&#x5B57;&#x7535;&#x8DEF;&#x6709;&#x4E09;&#x79CD;&#x72B6;&#x6001;&#xFF1A;&#x9AD8;&#x7535;&#x5E73;&#x3001;&#x4F4E;&#x7535;&#x5E73;&#x3001;&#x548C;&#x9AD8;&#x963B;&#x72B6;&#x6001;&#x3002;&#x6709;&#x4E9B;&#x5E94;&#x7528;&#x573A;&#x5408;&#x4E0D;&#x5E0C;&#x671B;&#x51FA;&#x73B0;&#x9AD8;&#x963B;&#x72B6;&#x6001;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E0A;&#x62C9;&#x7535;&#x963B;&#x6216;&#x4E0B;&#x62C9;&#x7535;&#x963B;&#x7684;&#x65B9;&#x5F0F;&#x4F7F;&#x5176;&#x5904;&#x4E8E;&#x7A33;&#x5B9A;&#x72B6;&#x6001;&#x3002;FPGA &#x7684; I/O &#x7AEF;&#x53E3;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5916;&#x63A5;&#x7535;&#x963B;&#x4E0A;&#x4E0B;&#x62C9;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x82AF;&#x7247;&#x5185;&#x90E8;&#xFF0C;&#x901A;&#x8FC7;&#x914D;&#x7F6E;&#x5B8C;&#x6210;&#x4E0A;&#x4E0B;&#x62C9;&#x3002;&#x4E0A;&#x62C9;&#x7535;&#x963B;&#x662F;&#x7528;&#x6765;&#x89E3;&#x51B3;&#x603B;&#x7EBF;&#x9A71;&#x52A8;&#x80FD;&#x529B;&#x4E0D;&#x8DB3;&#x65F6;&#x63D0;&#x4F9B;&#x7535;&#x6D41;&#x7684;&#xFF0C;&#x800C;&#x4E0B;&#x62C9;&#x7535;&#x963B;&#x662F;&#x7528;&#x6765;&#x5438;&#x6536;&#x7535;&#x6D41;&#x3002;&#x901A;&#x8FC7; FPGA &#x5185;&#x90E8;&#x914D;&#x7F6E;&#x5B8C;&#x6210;&#x4E0A;&#x4E0B;&#x62C9;&#xFF0C;&#x80FD;&#x6709;&#x6548;&#x8282;&#x7EA6;&#x7535;&#x8DEF;&#x677F;&#x9762;&#x79EF;&#xFF0C;&#x662F;&#x8BBE;&#x8BA1;&#x7684;&#x9996;&#x9009;&#x65B9;&#x6848;&#x3002;&#x4E0A;&#x3001;&#x4E0B;&#x62C9;&#x7684;&#x539F;&#x8BED;&#x5206;&#x522B;&#x4E3A; PULLUP &#x548C; PULLDOWN&#x3002; </p>
+<pre><code class="lang-verilog"><span class="hljs-comment">// PULLUP: &#x4E0A;&#x62C9;&#x539F;&#x8BED;&#xFF08;I/O Buffer Weak Pull-up&#xFF09;</span>
+<span class="hljs-comment">// &#x9002;&#x7528;&#x82AF;&#x7247;&#xFF1A;&#x6240;&#x6709;&#x82AF;&#x7247;</span>
+PULLUP PULLUP_inst (
+<span class="hljs-variable">.O</span>(O),
+<span class="hljs-comment">//&#x4E0A;&#x62C9;&#x8F93;&#x51FA;&#xFF0C;&#x9700;&#x8981;&#x76F4;&#x63A5;&#x8FDE;&#x63A5;&#x5230;&#x8BBE;&#x8BA1;&#x7684;&#x9876;&#x5C42;&#x6A21;&#x5757;&#x7AEF;&#x53E3;&#x4E0A;);</span>
+<span class="hljs-comment">// &#x7ED3;&#x675F; PULLUP &#x6A21;&#x5757;&#x7684;&#x4F8B;&#x5316;&#x8FC7;&#x7A0B;</span>
+
+
+<span class="hljs-comment">// PULLDOWN:&#x4E0B;&#x62C9;&#x539F;&#x8BED;&#xFF08; I/O Buffer Weak Pull-down&#xFF09;</span>
+<span class="hljs-comment">// &#x9002;&#x7528;&#x82AF;&#x7247;&#xFF1A;&#x6240;&#x6709;&#x82AF;&#x7247;</span>
+PULLDOWN PULLDOWN_inst (
+<span class="hljs-variable">.O</span>(O),
+<span class="hljs-comment">// &#x4E0B;&#x62C9;&#x8F93;&#x51FA;&#xFF0C;&#x9700;&#x8981;&#x76F4;&#x63A5;&#x8FDE;&#x63A5;&#x5230;&#x8BBE;&#x8BA1;&#x7684;&#x9876;&#x5C42;&#x6A21;&#x5757;&#x7AEF;&#x53E3;&#x4E0A;</span>
+);
+<span class="hljs-comment">// &#x7ED3;&#x675F; PULLDOWN &#x6A21;&#x5757;&#x7684;&#x4F8B;&#x5316;&#x8FC7;&#x7A0B;</span>
+</code></pre>
 <h2 id="&#x5BC4;&#x5B58;&#x5668;&#x548C;&#x9501;&#x5B58;&#x5668;"><a name="&#x5BC4;&#x5B58;&#x5668;&#x548C;&#x9501;&#x5B58;&#x5668;" class="plugin-anchor" href="#&#x5BC4;&#x5B58;&#x5668;&#x548C;&#x9501;&#x5B58;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BC4;&#x5B58;&#x5668;&#x548C;&#x9501;&#x5B58;&#x5668;</h2>
+<p>&#x5BC4;&#x5B58;&#x5668;&#x548C;&#x9501;&#x5B58;&#x5668;&#x662F;&#x65F6;&#x5E8F;&#x7535;&#x8DEF;&#x4E2D;&#x5E38;&#x7528;&#x7684;&#x57FA;&#x672C;&#x5143;&#x4EF6;&#x3002;</p>
+<ul>
+<li>FDCPE &#x5E26;&#x6709;&#x65F6;&#x949F;&#x4F7F;&#x80FD;&#x3001;&#x5F02;&#x6B65;&#x9884;&#x914D;&#x7F6E;&#x548C;&#x6E05;&#x7A7A;&#x4FE1;&#x53F7;&#x7684;D&#x89E6;&#x53D1;&#x5668;</li>
+<li>FDRSE &#x5E26;&#x6709;&#x540C;&#x6B65;&#x65F6;&#x949F;&#x4F7F;&#x80FD;&#x3001;&#x540C;&#x6B65;&#x9884;&#x914D;&#x7F6E;&#x548C;&#x6E05;&#x7A7A;&#x4FE1;&#x53F7;&#x7684;RS&#x89E6;&#x53D1;&#x5668;</li>
+<li>LCDPE &#x5E26;&#x6709;&#x65F6;&#x949F;&#x4F7F;&#x80FD;&#x3001;&#x5F02;&#x6B65;&#x9884;&#x914D;&#x7F6E;&#x548C;&#x6E05;&#x7A7A;&#x4FE1;&#x53F7;&#x7684;&#x900F;&#x660E;&#x6570;&#x636E;&#x9501;&#x5B58;&#x5668;</li>
+</ul>
+<h3 id="fdcpe"><a name="fdcpe" class="plugin-anchor" href="#fdcpe"><i class="fa fa-link" aria-hidden="true"></i></a>FDCPE</h3>
+<p>FDCPE &#x6307;&#x5E26;&#x5355;&#x6570;&#x636E;&#x8F93;&#x5165;&#x4FE1;&#x53F7; D&#x3001;&#x5355;&#x8F93;&#x51FA; O&#x3001;&#x65F6;&#x949F;&#x4F7F;&#x80FD;&#x4FE1;&#x53F7; CE&#x3001;&#x5F02;&#x6B65;&#x590D;&#x4F4D; PRE &#x548C;&#x5F02;&#x6B65;&#x6E05;&#x7A7A;&#x4FE1;&#x53F7; CLR &#x7684; D &#x89E6;&#x53D1;&#x5668;&#x3002;&#x5F53; PRE &#x4FE1;&#x53F7;&#x4E3A;&#x9AD8;&#x65F6;&#xFF0C;&#x8F93;&#x51FA;&#x7AEF; O &#x4E3A;&#x9AD8;&#xFF1B;&#x5F53; CLR &#x4E3A;&#x9AD8;&#x65F6;&#xFF0C;&#x8F93;&#x51FA;&#x7AEF; O &#x4E3A;&#x4F4E;&#xFF1B;&#x5F53; PRE &#x548C; CLR &#x90FD;&#x4E3A;&#x4F4E;&#x3001;CE &#x4FE1;&#x53F7;&#x4E3A;&#x9AD8;&#x65F6;&#xFF0C;&#x8F93;&#x5165;&#x4FE1;&#x53F7; D &#x5728;&#x65F6;&#x949F;&#x4E0A;&#x5347;&#x6CBF;&#x88AB;&#x52A0;&#x8F7D;&#x5230;&#x89E6;&#x53D1;&#x5668;&#x4E2D;&#xFF0C;&#x5E76;&#x88AB;&#x9001;&#x5230;&#x8F93;&#x51FA;&#x7AEF;&#xFF1B;&#x5F53; PRE &#x548C; CLR &#x90FD;&#x4E3A;&#x4F4E;&#x3001;CE &#x4FE1;&#x53F7;&#x4E3A;&#x4F4E;&#x65F6;&#xFF0C;&#x8F93;&#x51FA;&#x7AEF;&#x4FDD;&#x6301;&#x4E0D;&#x53D8;&#x3002;</p>
+<pre><code class="lang-verilog"><span class="hljs-comment">// FDCPE: D &#x89E6;&#x53D1;&#x5668;&#xFF08;Single Data Rate D Flip-Flop &#xFF09;</span>
+<span class="hljs-comment">// &#x9002;&#x7528;&#x82AF;&#x7247;&#xFF1A;&#x6240;&#x6709; FPGA &#x82AF;&#x7247;</span>
+FDCPE #(
+<span class="hljs-variable">.INIT</span>(<span class="hljs-number">1&apos;b0</span>)
+<span class="hljs-comment">//&#x521D;&#x59CB;&#x5316;&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x503C;&#xFF0C;&#x53EF;&#x8BBE;&#x7F6E;&#x4E3A; 1&apos;b0 &#x6216; 1&apos;b1</span>
+) FDCPE_inst (
+<span class="hljs-variable">.Q</span>(Q), <span class="hljs-comment">// &#x6570;&#x636E;&#x8F93;&#x51FA;&#x7AEF;&#x53E3;</span>
+<span class="hljs-variable">.C</span>(C), <span class="hljs-comment">// &#x65F6;&#x949F;&#x8F93;&#x5165;&#x7AEF;&#x53E3;</span>
+<span class="hljs-variable">.CE</span>(CE), <span class="hljs-comment">// &#x65F6;&#x949F;&#x4F7F;&#x80FD;&#x8F93;&#x5165;&#x4FE1;&#x53F7;</span>
+<span class="hljs-variable">.CLR</span>(CLR), <span class="hljs-comment">// &#x5F02;&#x6B65;&#x6E05;&#x7A7A;&#x8F93;&#x5165;&#x4FE1;&#x53F7;</span>
+<span class="hljs-variable">.D</span>(D), <span class="hljs-comment">// &#x6570;&#x636E;&#x8F93;&#x5165;&#x4FE1;&#x53F7;</span>
+<span class="hljs-variable">.PRE</span>(PRE) <span class="hljs-comment">// &#x5F02;&#x6B65;&#x590D;&#x4F4D;&#x8F93;&#x5165;&#x4FE1;&#x53F7;</span>
+);
+<span class="hljs-comment">// &#x7ED3;&#x675F; FDCPE &#x6A21;&#x5757;&#x7684;&#x4F8B;&#x5316;&#x8FC7;&#x7A0B;</span>
+</code></pre>
 <h2 id="&#x65F6;&#x949F;&#x7EC4;&#x4EF6;"><a name="&#x65F6;&#x949F;&#x7EC4;&#x4EF6;" class="plugin-anchor" href="#&#x65F6;&#x949F;&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65F6;&#x949F;&#x7EC4;&#x4EF6;</h2>
+<p>&#x65F6;&#x949F;&#x7EC4;&#x4EF6;&#x5305;&#x62EC;&#x5404;&#x79CD;&#x5168;&#x5C40;&#x65F6;&#x949F;&#x7F13;&#x51B2;&#x5668;&#x3001;&#x5168;&#x5C40;&#x65F6;&#x949F;&#x590D;&#x7528;&#x5668;&#x3001;&#x666E;&#x901A;I/O&#x672C;&#x5730;&#x7684;&#x65F6;&#x949F;&#x7F13;&#x51B2;&#x5668;&#x4EE5;&#x53CA;&#x9AD8;&#x7EA7;&#x6570;&#x5B57;&#x65F6;&#x949F;&#x7BA1;&#x7406;&#x6A21;&#x5757;</p>
+<ul>
+<li>BUFG &#x5168;&#x5C40;&#x65F6;&#x949F;&#x7F13;&#x51B2;&#x5668;</li>
+<li>BUFGCE &#x5168;&#x5C40;&#x65F6;&#x949F;&#x590D;&#x7528;&#x5668;&#xFF0C;&#x9644;&#x5E26;&#x65F6;&#x949F;&#x4F7F;&#x80FD;&#x4FE1;&#x53F7;&#x548C;0&#x72B6;&#x6001;&#x8F93;&#x51FA;</li>
+<li>BUFGCE_1 &#x5168;&#x5C40;&#x65F6;&#x949F;&#x590D;&#x7528;&#x7F13;&#x51B2;&#x5668;&#xFF0C;&#x9644;&#x5E26;&#x65F6;&#x949F;&#x4F7F;&#x80FD;&#x4FE1;&#x53F7;&#x548C;1&#x72B6;&#x6001;&#x8F93;&#x51FA;</li>
+<li>BUFGCTRL &#x5168;&#x5C40;&#x65F6;&#x949F;&#x590D;&#x7528;&#x7F13;&#x51B2;&#x5668;</li>
+<li>BUFGMUX &#x5168;&#x5C40;&#x65F6;&#x949F;&#x590D;&#x7528;&#x7F13;&#x51B2;&#x5668;&#xFF0C;&#x9644;&#x5E26;&#x65F6;&#x949F;&#x4F7F;&#x80FD;&#x4FE1;&#x53F7;&#x548C;0&#x72B6;&#x6001;&#x8F93;&#x51FA;</li>
+<li>BUFMUX_1 &#x5168;&#x5C40;&#x65F6;&#x949F;&#x590D;&#x7528;&#x5668;&#xFF0C;&#x9644;&#x5E26;0&#x72B6;&#x6001;&#x8F93;&#x51FA;</li>
+<li>BUFGMUX_VIRTEX4 Virtex-4&#x5668;&#x4EF6;&#x7279;&#x6709;&#x7684;&#x5168;&#x5C40;&#x65F6;&#x949F;&#x590D;&#x7528;&#x7F13;&#x51B2;&#x5668;</li>
+<li>BUFIO I/O&#x7AEF;&#x53E3;&#x672C;&#x5730;&#x65F6;&#x949F;&#x7F13;&#x51B2;&#x5668;</li>
+<li>BUFR I/O&#x7AEF;&#x53E3;&#x548C;CLB&#x7684;&#x672C;&#x5730;&#x65F6;&#x949F;&#x7F13;&#x51B2;&#x5668;</li>
+<li>DCM_ADV &#x5E26;&#x6709;&#x9AD8;&#x7EA7;&#x7279;&#x5F81;&#x7684;&#x6570;&#x5B57;&#x65F6;&#x949F;&#x7BA1;&#x7406;&#x6A21;&#x5757;</li>
+<li>DCM_BASE &#x5E26;&#x6709;&#x57FA;&#x672C;&#x7279;&#x5F81;&#x7684;&#x6570;&#x5B57;&#x65F6;&#x949F;&#x7BA1;&#x7406;&#x6A21;&#x5757;</li>
+<li>DCM_PS &#x5E26;&#x6709;&#x57FA;&#x672C;&#x7279;&#x5F81;&#x548C;&#x79FB;&#x76F8;&#x7279;&#x5F81;&#x7684;&#x6570;&#x5B57;&#x65F6;&#x949F;&#x7BA1;&#x7406;&#x6A21;&#x5757;</li>
+<li>PMCD &#x5339;&#x914D;&#x76F8;&#x4F4D;&#x65F6;&#x949F;&#x5206;&#x9891;&#x5668;</li>
+</ul>
+<h3 id="bufg"><a name="bufg" class="plugin-anchor" href="#bufg"><i class="fa fa-link" aria-hidden="true"></i></a>BUFG</h3>
+<p>BUFG &#x662F;&#x5177;&#x6709;&#x9AD8;&#x6247;&#x51FA;&#x7684;&#x5168;&#x5C40;&#x65F6;&#x949F;&#x7F13;&#x51B2;&#x5668;&#xFF0C;&#x4E00;&#x822C;&#x7531;&#x7EFC;&#x5408;&#x5668;&#x81EA;&#x52A8;&#x63A8;&#x65AD;&#x5E76;&#x4F7F;&#x7528;&#x3002;</p>
+<p>&#x5168;&#x5C40;&#x65F6;&#x949F;&#x662F;&#x5177;&#x6709;&#x9AD8;&#x6247;&#x51FA;&#x9A71;&#x52A8;&#x80FD;&#x529B;&#x7684;&#x7F13;&#x51B2;&#x5668;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x4FE1;&#x53F7;&#x8FDE;&#x5230;&#x65F6;&#x949F;&#x6296;&#x52A8;&#x53EF;&#x4EE5;&#x5FFD;&#x7565;&#x4E0D;&#x8BA1;&#x7684;&#x5168;&#x5C40;&#x65F6;&#x949F;&#x7F51;&#x7EDC;&#xFF0C;BUFG &#x7EC4;&#x4EF6;&#x8FD8;&#x53EF;&#x5E94;&#x7528;&#x4E8E;&#x5178;&#x578B;&#x7684;&#x9AD8;&#x6247;&#x51FA;&#x4FE1;&#x53F7;&#x548C;&#x7F51;&#x7EDC;&#xFF0C;&#x5982;&#x590D;&#x4F4D;&#x4FE1;&#x53F7;&#x548C;&#x65F6;&#x949F;&#x4F7F;&#x80FD;&#x4FE1;&#x53F7;&#x3002;&#x5982;&#x679C;&#x8981;&#x5BF9;&#x5168;&#x5C40;&#x65F6;&#x949F;&#x5B9E;&#x73B0; PLL &#x6216; DCM &#x7B49;&#x65F6;&#x949F;&#x7BA1;&#x7406;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x624B;&#x52A8;&#x4F8B;&#x5316;&#x8BE5;&#x7F13;&#x51B2;&#x5668;&#x3002;</p>
+<pre><code class="lang-verilog"><span class="hljs-comment">// BUFG: &#x5168;&#x5C40;&#x65F6;&#x949F;&#x7F13;&#x5B58;&#xFF08;Global Clock Buffer&#xFF09;&#xFF0C;&#x53EA;&#x80FD;&#x4EE5;&#x5185;&#x90E8;&#x4FE1;&#x53F7;&#x9A71;&#x52A8;</span>
+BUFG BUFG_inst (
+<span class="hljs-variable">.O</span>(O), <span class="hljs-comment">//&#x65F6;&#x949F;&#x7F13;&#x5B58;&#x8F93;&#x51FA;&#x4FE1;&#x53F7;</span>
+<span class="hljs-variable">.I</span>(I) <span class="hljs-comment">// /&#x65F6;&#x949F;&#x7F13;&#x5B58;&#x8F93;&#x5165;&#x4FE1;&#x53F7;</span>
+);
+<span class="hljs-comment">// &#x7ED3;&#x675F; BUFG_ins &#x6A21;&#x5757;&#x7684;&#x4F8B;&#x5316;&#x8FC7;&#x7A0B;</span>
+</code></pre>
+<h3 id="bufmux"><a name="bufmux" class="plugin-anchor" href="#bufmux"><i class="fa fa-link" aria-hidden="true"></i></a>BUFMUX</h3>
+<p>BUFMUX &#x662F;&#x5168;&#x5C40;&#x65F6;&#x949F;&#x590D;&#x7528;&#x5668;&#xFF0C;&#x9009;&#x62E9;&#x4E24;&#x4E2A;&#x8F93;&#x5165;&#x65F6;&#x949F; I0 &#x6216; I1 &#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x4F5C;&#x4E3A;&#x5168;&#x5C40;&#x65F6;&#x949F;&#x3002;</p>
+<p>&#x5F53;&#x9009;&#x62E9;&#x4FE1;&#x53F7; S &#x4E3A;&#x4F4E;&#x65F6;&#xFF0C;&#x9009;&#x62E9; I0&#xFF1B;&#x5426;&#x5219;&#x8F93;&#x51FA; I1&#xFF0C;&#x5176;&#x771F;&#x503C;&#x8868;&#x5982;&#x8868; M &#x6240;&#x793A;&#x3002;BUFMUX &#x539F;&#x8BED;&#x548C; BUFMUX1 &#x539F;&#x8BED;&#x7684;&#x529F;&#x80FD;&#x4E00;&#x6837;&#xFF0C;&#x53EA;&#x662F;&#x9009;&#x62E9;&#x903B;&#x8F91;&#x4E0D;&#x540C;&#xFF0C;&#x5BF9;&#x4E8E; BUFMUX1&#xFF0C;&#x5F53;&#x9009;&#x62E9;&#x4FE1;&#x53F7; S &#x4E3A;&#x4F4E;&#x65F6;&#xFF0C;&#x9009;&#x62E9; I1&#xFF1B;&#x5426;&#x5219;&#x8F93;&#x51FA; I0&#x3002; </p>
+<pre><code class="lang-verilog"><span class="hljs-comment">// BUFGMUX: &#x5168;&#x5C40;&#x65F6;&#x949F;&#x7684; 2 &#x5230; 1 &#x590D;&#x7528;&#x5668;&#xFF08;Global Clock Buffer 2-to-1 MUX&#xFF09;</span>
+<span class="hljs-comment">// &#x9002;&#x7528;&#x82AF;&#x7247;&#xFF1A;Virtex-II/II-Pro/4/5, Spartan-3/3E/3A</span>
+BUFGMUX BUFGMUX_inst (
+<span class="hljs-variable">.O</span>(O), <span class="hljs-comment">//&#x65F6;&#x949F;&#x590D;&#x7528;&#x5668;&#x7684;&#x8F93;&#x51FA;&#x4FE1;&#x53F7;</span>
+<span class="hljs-variable">.I0</span>(I0), <span class="hljs-comment">// 0 &#x65F6;&#x949F;&#x8F93;&#x5165;&#x4FE1;&#x53F7;</span>
+<span class="hljs-variable">.I1</span>(I1), <span class="hljs-comment">//1 &#x65F6;&#x949F;&#x8F93;&#x5165;&#x4FE1;&#x53F7;</span>
+<span class="hljs-variable">.S</span>(S) <span class="hljs-comment">// &#x65F6;&#x949F;&#x9009;&#x62E9;&#x4FE1;&#x53F7;</span>
+);
+<span class="hljs-comment">// &#x7ED3;&#x675F; BUFGMUX_inst &#x6A21;&#x5757;&#x7684;&#x4F8B;&#x5316;&#x8FC7;&#x7A0B;</span>
+</code></pre>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF1A;&#x8BE5;&#x539F;&#x8BED;&#x53EA;&#x7528;&#x7528;&#x5168;&#x5C40;&#x65F6;&#x949F;&#x5904;&#x7406;&#xFF0C;&#x4E0D;&#x80FD;&#x4F5C;&#x4E3A;&#x63A5;&#x53E3;&#x4F7F;&#x7528;&#x3002;</p>
+<h3 id="bufio"><a name="bufio" class="plugin-anchor" href="#bufio"><i class="fa fa-link" aria-hidden="true"></i></a>BUFIO</h3>
+<p>BUFIO &#x662F;&#x672C;&#x5730; I/O &#x65F6;&#x949F;&#x7F13;&#x51B2;&#x5668;&#xFF0C;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x8F93;&#x5165;&#x4E0E;&#x8F93;&#x51FA;&#xFF0C;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x3002;BUFIO &#x4F7F;&#x7528;&#x72EC;&#x7ACB;&#x4E8E;&#x5168;&#x5C40;&#x65F6;&#x949F;&#x7F51;&#x7EDC;&#x7684;&#x4E13;&#x7528;&#x65F6;&#x949F;&#x7F51;&#x7EDC;&#x6765;&#x9A71;&#x52A8;&#x7EB5;&#x5411; I/O &#x7BA1;&#x811A;&#xFF0C;&#x6240;&#x4EE5;&#x975E;&#x5E38;&#x9002;&#x5408;&#x540C;&#x6B65;&#x6570;&#x636E;&#x91C7;&#x96C6;&#x3002;BUFIO &#x8981;&#x6C42;&#x65F6;&#x949F;&#x548C;&#x76F8;&#x5E94;&#x7684; I/O &#x5FC5;&#x987B;&#x5728;&#x540C;&#x4E00;&#x65F6;&#x949F;&#x533A;&#x57DF;&#xFF0C;&#x800C;&#x4E0D;&#x540C;&#x65F6;&#x949F;&#x7F51;&#x7EDC;&#x7684;&#x9A71;&#x52A8;&#x9700;&#x8981; BUFR &#x539F;&#x8BED;&#x6765;&#x5B9E;&#x73B0;&#x3002;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x7531;&#x4E8E; BUFIO &#x5F15;&#x51FA;&#x7684;&#x65F6;&#x949F;&#x53EA;&#x5230;&#x8FBE;&#x4E86; I/O &#x5217;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x80FD;&#x6765;&#x9A71;&#x52A8;&#x903B;&#x8F91;
+&#x8D44;&#x6E90;&#xFF0C;&#x5982; CLB &#x548C;&#x5757; RAM&#x3002; </p>
+<pre><code class="lang-verilog"><span class="hljs-comment">// BUFIO: &#x672C;&#x5730; I/O &#x65F6;&#x949F;&#x7F13;&#x51B2;&#x5668;&#xFF08; Local Clock Buffer&#xFF09;</span>
+<span class="hljs-comment">// &#x9002;&#x7528;&#x82AF;&#x7247;&#xFF1A;Virtex-4/5</span>
+BUFIO BUFIO_inst (
+<span class="hljs-variable">.O</span>(O), <span class="hljs-comment">//&#x672C;&#x5730; I/O &#x65F6;&#x949F;&#x7F13;&#x51B2;&#x5668;&#x7684;&#x8F93;&#x51FA;&#x4FE1;&#x53F7;</span>
+<span class="hljs-variable">.I</span>(I) <span class="hljs-comment">//&#x672C;&#x5730; I/O &#x65F6;&#x949F;&#x7F13;&#x51B2;&#x5668;&#x7684;&#x8F93;&#x5165;&#x4FE1;&#x53F7;</span>
+);
+<span class="hljs-comment">// &#x7ED3;&#x675F; BUFIO &#x6A21;&#x5757;&#x7684;&#x4F8B;&#x5316;&#x8FC7;&#x7A0B;</span>
+</code></pre>
+<h3 id="bufr"><a name="bufr" class="plugin-anchor" href="#bufr"><i class="fa fa-link" aria-hidden="true"></i></a>BUFR</h3>
+<p>BUFR &#x662F;&#x672C;&#x5730; I/O &#x65F6;&#x949F;&#x3001;&#x903B;&#x8F91;&#x7F13;&#x51B2;&#x5668;&#x3002;BUFR &#x548C; BUFIO &#x90FD;&#x662F;&#x5C06;&#x9A71;&#x52A8;&#x65F6;&#x949F;&#x5F15;&#x5165;&#x67D0;&#x4E00;&#x65F6;&#x949F;&#x533A;&#x57DF;&#x7684;&#x4E13;&#x7528;&#x65F6;&#x949F;&#x7F51;&#x7EDC;&#xFF0C;&#x800C;&#x72EC;&#x7ACB;&#x4E8E;&#x5168;&#x5C40;&#x65F6;&#x949F;&#x7F51;&#x7EDC;&#xFF1B;&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;BUFR &#x4E0D;&#x4EC5;&#x53EF;&#x4EE5;&#x8DE8;&#x8D8A;&#x4E0D;&#x540C;&#x7684;&#x65F6;&#x949F;&#x533A;&#x57DF;&#xFF08;&#x6700;&#x591A; 3 &#x4E2A;&#xFF09;&#xFF0C;&#x8FD8;&#x80FD;&#x591F;&#x9A71;&#x52A8; I/O &#x903B;&#x8F91;&#x4EE5;&#x53CA;&#x81EA;&#x8EAB;&#x6216;&#x90BB;&#x8FD1;&#x65F6;&#x949F;&#x533A;&#x57DF;&#x7684;&#x903B;&#x8F91;&#x8D44;&#x6E90;&#x3002;BUFIO &#x7684;&#x8F93;&#x51FA;&#x548C;&#x672C;&#x5730;&#x5185;&#x90E8;&#x4E92;&#x8054;&#x90FD;&#x80FD;&#x9A71;&#x52A8; BUFR &#x7EC4;&#x4EF6;&#x3002;&#x6B64;&#x5916;&#xFF0C;BUFR &#x80FD;&#x5B8C;&#x6210;&#x8F93;&#x5165;&#x65F6;&#x949F; 1&#xFF5E;8 &#x7684;&#x6574;&#x6570;&#x5206;&#x9891;&#x3002;&#x56E0;&#x6B64;&#xFF0C;BUFR &#x662F;&#x540C;&#x6B65;&#x8BBE;&#x8BA1;&#x4E2D;&#x5B9E;&#x73B0;&#x8DE8;&#x65F6;&#x949F;&#x57DF;&#x4EE5;&#x53CA;&#x4E32;&#x5E76;&#x8F6C;&#x6362;&#x7684;&#x6700;&#x4F73;&#x65B9;&#x5F0F;&#x3002;</p>
+<pre><code class="lang-verilog"><span class="hljs-comment">// BUFR: &#x672C;&#x5730; I/O &#x65F6;&#x949F;&#x3001;&#x903B;&#x8F91;&#x7F13;&#x51B2;&#x5668;&#xFF08;Regional Clock Buffer&#xFF09;</span>
+<span class="hljs-comment">// &#x9002;&#x7528;&#x82AF;&#x7247;&#xFF1A;Virtex-4/5</span>
+BUFR #(
+<span class="hljs-variable">.BUFR_DIVIDE</span>(<span class="hljs-string">&quot;BYPASS&quot;</span>),
+<span class="hljs-comment">//&#x5206;&#x9891;&#x6BD4;&#xFF0C;&#x53EF;&#x9009;&#x62E9; &quot;BYPASS&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;&#x3002;</span>
+<span class="hljs-variable">.SIM_DEVICE</span>(<span class="hljs-string">&quot;VIRTEX4&quot;</span>)
+<span class="hljs-comment">// &#x6307;&#x5B9A;&#x76EE;&#x6807;&#x82AF;&#x7247;, &quot;VIRTEX4&quot; &#x6216;&#x8005; &quot;VIRTEX5&quot;</span>
+) BUFR_inst (
+<span class="hljs-variable">.O</span>(O), <span class="hljs-comment">//&#x65F6;&#x949F;&#x7F13;&#x5B58;&#x8F93;&#x51FA;&#x4FE1;&#x53F7;</span>
+<span class="hljs-variable">.CE</span>(CE), <span class="hljs-comment">//&#x65F6;&#x949F;&#x4F7F;&#x80FD;&#x4FE1;&#x53F7;&#xFF0C;&#x8F93;&#x5165;&#x4FE1;&#x53F7;</span>
+<span class="hljs-variable">.CLR</span>(CLR), <span class="hljs-comment">//&#x65F6;&#x949F;&#x7F13;&#x5B58;&#x6E05;&#x7A7A;&#x4FE1;&#x53F7;</span>
+<span class="hljs-variable">.I</span>(I) <span class="hljs-comment">// &#x65F6;&#x949F;&#x7F13;&#x5B58;&#x8F93;&#x5165;&#x4FE1;&#x53F7;</span>
+);
+<span class="hljs-comment">// &#x7ED3;&#x675F; BUFR &#x6A21;&#x5757;&#x7684;&#x4F8B;&#x5316;&#x8FC7;&#x7A0B;</span>
+</code></pre>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF1A;BUFIO &#x548C; BUFR &#x53EA;&#x80FD;&#x5728; Virtex-4 &#x7CFB;&#x5217;&#x4EE5;&#x53CA;&#x66F4;&#x9AD8;&#x7CFB;&#x5217;&#x82AF;&#x7247;&#x4E2D;&#x4F7F;&#x7528;&#x3002;</p>
 <h2 id="&#x5904;&#x7406;&#x5668;&#x7EC4;&#x4EF6;"><a name="&#x5904;&#x7406;&#x5668;&#x7EC4;&#x4EF6;" class="plugin-anchor" href="#&#x5904;&#x7406;&#x5668;&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5904;&#x7406;&#x5668;&#x7EC4;&#x4EF6;</h2>
+<p>&#x5904;&#x7406;&#x5668;&#x7EC4;&#x4EF6;&#x4E3B;&#x8981;&#x5305;&#x62EC;&#x9AD8;&#x901F;&#x4EE5;&#x592A;&#x7F51; MAC &#x63A7;&#x5236;&#x5668;&#x548C; PowerPC &#x786C;&#x6838;</p>
 <h2 id="&#x79FB;&#x4F4D;&#x5BC4;&#x5B58;&#x5668;"><a name="&#x79FB;&#x4F4D;&#x5BC4;&#x5B58;&#x5668;" class="plugin-anchor" href="#&#x79FB;&#x4F4D;&#x5BC4;&#x5B58;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x79FB;&#x4F4D;&#x5BC4;&#x5B58;&#x5668;</h2>
+<p>&#x79FB;&#x4F4D;&#x5BC4;&#x5B58;&#x5668;&#x7EC4;&#x4EF6;&#x4E3A; Xilinx &#x82AF;&#x7247;&#x6240;&#x72EC;&#x6709;&#xFF0C;&#x7531;&#x4E8E;&#x5C5E;&#x6027;&#x7684;&#x4E0D;&#x540C;&#xFF0C;&#x5177;&#x4F53;&#x6709; 8 &#x4E2A;&#x3002;&#x5404;&#x4E2A;&#x79FB;&#x4F4D;&#x5BC4;&#x5B58;&#x5668;&#x539F;&#x8BED;&#x90FD;&#x662F;&#x5728; SRL16 &#x7684;&#x57FA;&#x7840;&#x4E0A;&#x53D1;&#x5C55;&#x8D77;&#x6765;&#x7684;&#x3002;</p>
+<ul>
+<li>SRL16 16&#x6BD4;&#x7279;&#x79FB;&#x4F4D;&#x5BC4;&#x5B58;&#x5668;&#x67E5;&#x627E;&#x8868;</li>
+<li>SRL16_1 &#x65F6;&#x949F;&#x4E0B;&#x964D;&#x4F5C;&#x7528;&#x7684;16&#x6BD4;&#x7279;&#x79FB;&#x4F4D;&#x5BC4;&#x5B58;&#x5668;&#x67E5;&#x627E;&#x8868;</li>
+<li>SRL16E &#x5E26;&#x6709;&#x65F6;&#x949F;&#x4F7F;&#x80FD;&#x4FE1;&#x53F7;&#x7684;16&#x6BD4;&#x7279;&#x79FB;&#x4F4D;&#x5BC4;&#x5B58;&#x5668;&#x67E5;&#x627E;&#x8868;</li>
+<li>SRL16E_1 &#x5E26;&#x6709;&#x65F6;&#x949F;&#x4F7F;&#x80FD;&#x4FE1;&#x53F7;&#x4E14;&#x5728;&#x65F6;&#x949F;&#x4E0B;&#x964D;&#x6CBF;&#x4F5C;&#x7528;&#x7684;16&#x6BD4;&#x7279;&#x79FB;&#x52A8;&#x5BC4;&#x5B58;&#x5668;&#x67E5;&#x627E;&#x8868;</li>
+<li>SRLC16 &#x5E26;&#x6709;&#x8FDB;&#x4F4D;&#x7684;16&#x6BD4;&#x7279;&#x79FB;&#x4F4D;&#x5BC4;&#x5B58;&#x5668;&#x67E5;&#x627E;&#x8868;</li>
+<li>SRLC616_1 &#x5E26;&#x6709;&#x8FDB;&#x4F4D;&#x4E14;&#x5728;&#x65F6;&#x949F;&#x4E0B;&#x964D;&#x6CBF;&#x4F5C;&#x7528;&#x7684;16&#x6BD4;&#x7279;&#x79FB;&#x4F4D;&#x5BC4;&#x5B58;&#x5668;&#x67E5;&#x627E;&#x8868;</li>
+<li>SRLC6E &#x5E26;&#x6709;&#x65F6;&#x949F;&#x4F7F;&#x80FD;&#x548C;&#x8FDB;&#x4F4D;&#x4FE1;&#x53F7;&#x7684;16&#x6BD4;&#x7279;&#x79FB;&#x4F4D;&#x5BC4;&#x5B58;&#x5668;&#x67E5;&#x627E;&#x8868;</li>
+<li>SRLC6E_1 &#x5E26;&#x6709;&#x65F6;&#x949F;&#x4F7F;&#x80FD;&#x548C;&#x8FDB;&#x4F4D;&#x4FE1;&#x53F7;&#xFF0C;&#x4E14;&#x5728;&#x65F6;&#x949F;&#x4E0B;&#x964D;&#x6CBF;&#x4F5C;&#x7528;&#x7684;16&#x6BD4;&#x7279;&#x79FB;&#x4F4D;&#x5BC4;&#x5B58;&#x5668;&#x67E5;&#x627E;&#x8868;</li>
+</ul>
+<h3 id="srl16"><a name="srl16" class="plugin-anchor" href="#srl16"><i class="fa fa-link" aria-hidden="true"></i></a>SRL16</h3>
+<p>SRL16 &#x662F;&#x57FA;&#x4E8E;&#x67E5;&#x627E;&#x8868;&#xFF08;LUT&#xFF09;&#x7684;&#x79FB;&#x4F4D;&#x5BC4;&#x5B58;&#x5668;&#xFF0C;&#x5728;&#x5B9E;&#x9645;&#x5E94;&#x7528;&#x4E2D;&#x65E2;&#x80FD;&#x8282;&#x7701;&#x8D44;&#x6E90;&#xFF0C;&#x8FD8;&#x80FD;&#x4FDD;&#x8BC1;&#x65F6;&#x5E8F;&#x3002;&#x5176;&#x8F93;&#x5165;&#x4FE1;&#x53F7; A3&#x3001;A2&#x3001;A1 &#x4EE5;&#x53CA; A0 &#x9009;&#x62E9;&#x79FB;&#x4F4D;&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x8BFB;&#x53D6;&#x5730;&#x5740;&#xFF0C;&#x5F53;&#x5199;&#x4F7F;&#x80FD;&#x4FE1;&#x53F7;&#x9AD8;&#x6709;&#x6548;&#x65F6;&#xFF0C;&#x8F93;&#x5165;&#x4FE1;&#x53F7;&#x5C06;&#x88AB;&#x52A0;&#x8F7D;&#x5230;&#x79FB;&#x4F4D;&#x5BC4;&#x5B58;&#x5668;&#x4E2D;&#x3002;&#x5355;&#x4E2A;&#x79FB;&#x4F4D;&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x6DF1;&#x5EA6;&#x53EF;&#x4EE5;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x52A8;&#x6001;&#x8C03;&#x6574;&#xFF0C;&#x6700;&#x5927;&#x4E0D;&#x80FD;&#x8D85;&#x8FC7; 16&#x3002;&#x9700;&#x8981;&#x66F4;&#x5927;&#x6DF1;&#x5EA6;&#x7684;&#x79FB;&#x4F4D;&#x5BC4;&#x5B58;&#x5668;&#x65F6;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x5C06;&#x591A;&#x4E2A; SRL16 &#x62FC;&#x63A5;&#x8D77;&#x6765;&#x3002;</p>
+<pre><code class="lang-verilog"><span class="hljs-comment">// SRL16: 16 &#x4F4D;&#x67E5;&#x627E;&#x8868;&#x79FB;&#x4F4D;&#x5BC4;&#x5B58;&#x5668;&#xFF08;16-bit shift register LUT operating on posedge of clock&#xFF09;</span>
+<span class="hljs-comment">// &#x9002;&#x7528;&#x82AF;&#x7247;&#xFF1A;&#x6240;&#x6709; FPGA &#x82AF;&#x7247;</span>
+SRL16 #(
+<span class="hljs-variable">.INIT</span>(<span class="hljs-number">16&apos;h0000</span>)
+<span class="hljs-comment">// &#x521D;&#x59CB;&#x5316;&#x79FB;&#x4F4D;&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x503C;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A; 16 &#x6BD4;&#x7279;&#x4EFB;&#x610F;&#x6574;&#x6570;</span>
+) SRL16_inst (
+<span class="hljs-variable">.Q</span>(Q), <span class="hljs-comment">// SRL16 &#x7684;&#x6570;&#x636E;&#x8F93;&#x51FA;&#x4FE1;&#x53F7;</span>
+<span class="hljs-variable">.A0</span>(A0), <span class="hljs-comment">// &#x9009;&#x62E9;[0]&#x8F93;&#x5165;</span>
+<span class="hljs-variable">.A1</span>(A1), <span class="hljs-comment">// &#x9009;&#x62E9;[1]&#x8F93;&#x5165;</span>
+<span class="hljs-variable">.A2</span>(A2), <span class="hljs-comment">// &#x9009;&#x62E9;[2]&#x8F93;&#x5165;</span>
+<span class="hljs-variable">.A3</span>(A3), <span class="hljs-comment">// &#x9009;&#x62E9;[3]&#x8F93;&#x5165;</span>
+<span class="hljs-variable">.CLK</span>(CLK), <span class="hljs-comment">// &#x65F6;&#x949F;&#x8F93;&#x5165;&#x4FE1;&#x53F7;</span>
+<span class="hljs-variable">.D</span>(D) <span class="hljs-comment">// SRL16 &#x7684;&#x6570;&#x636E;&#x8F93;&#x5165;&#x4FE1;&#x53F7;</span>
+);
+<span class="hljs-comment">// &#x7ED3;&#x675F; SRL16 &#x6A21;&#x5757;&#x7684;&#x4F8B;&#x5316;&#x8FC7;&#x7A0B;</span>
+</code></pre>
 <h2 id="&#x914D;&#x7F6E;&#x548C;&#x68C0;&#x6D4B;&#x7EC4;&#x4EF6;"><a name="&#x914D;&#x7F6E;&#x548C;&#x68C0;&#x6D4B;&#x7EC4;&#x4EF6;" class="plugin-anchor" href="#&#x914D;&#x7F6E;&#x548C;&#x68C0;&#x6D4B;&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F6E;&#x548C;&#x68C0;&#x6D4B;&#x7EC4;&#x4EF6;</h2>
 <h2 id="ramrom&#x7EC4;&#x4EF6;"><a name="ramrom&#x7EC4;&#x4EF6;" class="plugin-anchor" href="#ramrom&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>RAM/ROM&#x7EC4;&#x4EF6;</h2>
+<p>RAM/ROM &#x7EC4;&#x4EF6;&#x53EF;&#x7528;&#x4E8E;&#x4F8B;&#x5316; FIFO&#x3001;&#x5206;&#x5E03;&#x5F0F; RAM&#x3001;&#x5206;&#x5E03;&#x5F0F; ROM&#x3001;&#x5757; RAM &#x4EE5;&#x53CA;&#x5757; ROM</p>
+<ul>
+<li>FIFO16 &#x57FA;&#x4E8E;Virtex-4&#x5757;RAM&#x7684;&#x5185;&#x5D4C;FIFO</li>
+<li>RAM16X1D &#x6DF1;&#x5EA6;&#x4E3A;16&#xFF0C;&#x4F4D;&#x5BBD;&#x4E3A;1&#x7684;&#x9759;&#x6001;&#x540C;&#x6B65;&#x53CC;&#x53E3;RAM</li>
+<li>RAM16X1S &#x6DF1;&#x5EA6;&#x4E3A;16&#xFF0C;&#x4F4D;&#x5BBD;&#x4E3A;1&#x7684;&#x9759;&#x6001;&#x540C;&#x6B65;RAM</li>
+<li>RAM32X1S &#x6DF1;&#x5EA6;&#x4E3A;32&#xFF0C;&#x4F4D;&#x5BBD;&#x4E3A;1&#x7684;&#x9759;&#x6001;&#x540C;&#x6B65;RAM</li>
+<li>RAM64X1S &#x6DF1;&#x5EA6;&#x4E3A;64&#xFF0C;&#x4F4D;&#x5BBD;&#x4E3A;1&#x7684;&#x9759;&#x6001;&#x540C;&#x6B65;RAM</li>
+<li>RAMB16 &#x5355;&#x53E3;&#x5757;RAM&#xFF0C;&#x4F4D;&#x5BBD;&#x53EF;&#x914D;&#x7F6E;&#x6210;1/2/4/9/18/36&#xFF0C;&#x5176;&#x5927;&#x5C0F;&#x53EF;&#x914D;&#x7F6E;&#x6210;16384&#x6BD4;&#x7279;&#x7684;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5668;&#xFF0C;&#x6216;&#x8005;2048&#x7684;&#x5947;&#x5076;&#x5B58;&#x50A8;&#x5668;</li>
+<li>RAMB32_S64_ECC &#x5E26;&#x6709;&#x5DEE;&#x9519;&#x5904;&#x7406;&#x7684;&#x6DF1;&#x5EA6;&#x4E3A;64&#x4F4D;&#xFF0C;&#x4F4D;&#x5BBD;&#x4E3A;64&#x4F4D;&#x7684;&#x540C;&#x6B65;&#x53CC;&#x53E3;&#x5757;RAM</li>
+<li>ROM16X1 &#x6DF1;&#x5EA6;&#x4E3A;16&#xFF0C;&#x4F4D;&#x5BBD;&#x4E3A;1&#x7684;&#x9759;&#x6001;&#x540C;&#x6B65;ROM</li>
+<li>ROM32X1 &#x6DF1;&#x5EA6;&#x4E3A;32&#xFF0C;&#x4F4D;&#x5BBD;&#x4E3A;1&#x7684;&#x9759;&#x6001;&#x540C;&#x6B65;ROM</li>
+<li>ROM64X1 &#x6DF1;&#x5EA6;&#x4E3A;64&#xFF0C;&#x4F4D;&#x5BBD;&#x4E3A;1&#x7684;&#x9759;&#x6001;&#x540C;&#x6B65;ROM</li>
+<li>ROM128X1 &#x6DF1;&#x5EA6;&#x4E3A;128&#xFF0C;&#x4F4D;&#x5BBD;&#x4E3A;1&#x7684;&#x9759;&#x6001;&#x540C;&#x6B65;ROM</li>
+<li>ROM256X1 &#x6DF1;&#x5EA6;&#x4E3A;256&#xFF0C;&#x4F4D;&#x5BBD;&#x4E3A;1&#x7684;&#x9759;&#x6001;&#x540C;&#x6B65;ROM</li>
+</ul>
+<h3 id="ram16x1s"><a name="ram16x1s" class="plugin-anchor" href="#ram16x1s"><i class="fa fa-link" aria-hidden="true"></i></a>RAM16X1S</h3>
+<p>RAM16X1S &#x662F;&#x6DF1;&#x5EA6;&#x4E3A; 16 &#x6BD4;&#x7279;&#xFF0C;&#x4F4D;&#x5BBD;&#x4E3A; 1 &#x7684;&#x540C;&#x6B65; RAM&#x3002;&#x5F53;&#x5199;&#x4F7F;&#x80FD;&#x4FE1;&#x53F7; WE &#x4E3A;&#x4F4E;&#x65F6;&#xFF0C;&#x5199;&#x7AEF;&#x53E3;&#x7684;&#x6570;&#x636E;&#x64CD;&#x4F5C;&#x65E0;&#x6548;&#xFF0C;RAM &#x5185;&#x90E8;&#x7684;&#x6570;&#x636E;&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#xFF1B;&#x5F53; WE &#x4E3A;&#x9AD8;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x610F;&#x5730;&#x5740;&#x4E2D;&#x5199;&#x5165;&#x6BD4;&#x7279;&#x3002;&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;&#x6570;&#x636E;&#x7684;&#x7A33;&#x5B9A;&#x6027;&#xFF0C;&#x5730;&#x5740;&#x548C;&#x6570;&#x636E;&#x5E94;&#x8BE5;&#x5728; WCLK &#x7684;&#x4E0A;&#x5347;&#x6CBF;&#x524D;&#x4FDD;&#x6301;&#x7A33;&#x5B9A;&#x3002;&#x8F93;&#x51FA;&#x4FE1;&#x53F7; O &#x4E3A; RAM &#x4E2D;&#x7531;&#x8BFB;&#x5730;&#x5740;&#x4FE1;&#x53F7;&#x6240;&#x786E;&#x5B9A;&#x7684;&#x5730;&#x5740;&#x4E2D;&#x6240;&#x5B58;&#x6570;&#x636E;&#x7684;&#x503C;&#x3002;&#x6B64;&#x5916;&#xFF0C;&#x8FD8;&#x53EF;&#x901A;&#x8FC7;&#x5C5E;&#x6027;&#x6307;&#x5B9A; RAM &#x7684;&#x521D;&#x59CB;&#x503C;&#x3002; </p>
+<pre><code class="lang-verilog"><span class="hljs-comment">// RAM16X1S: 16&#x6BD4;&#x7279; 1&#x6DF1;&#x5EA6;&#x540C;&#x6B65; RAM&#xFF08;16 x 1 posedge write distributed (LUT)</span>
+RAM&#xFF09;
+<span class="hljs-comment">// &#x9002;&#x7528;&#x82AF;&#x7247;&#xFF1A;&#x6240;&#x6709;&#x82AF;&#x7247;</span>
+RAM16X1S #(
+<span class="hljs-variable">.INIT</span>(<span class="hljs-number">16&apos;h0000</span>) 
+<span class="hljs-comment">//&#x5BF9; RAM &#x7684;&#x5185;&#x5BB9;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x8FD9;&#x91CC;&#x521D;&#x59CB;&#x5316;&#x4E3A;&#x5168; 1</span>
+) RAM16X1S_inst (
+<span class="hljs-variable">.O</span>(O), <span class="hljs-comment">// RAM output</span>
+<span class="hljs-variable">.A0</span>(A0), <span class="hljs-comment">// RAM address[0] input</span>
+<span class="hljs-variable">.A1</span>(A1), <span class="hljs-comment">// RAM address[1] input</span>
+<span class="hljs-variable">.A2</span>(A2), <span class="hljs-comment">// RAM address[2] input</span>
+<span class="hljs-variable">.A3</span>(A3), <span class="hljs-comment">// RAM address[3] input</span>
+<span class="hljs-variable">.D</span>(D), <span class="hljs-comment">// RAM data input</span>
+<span class="hljs-variable">.WCLK</span>(WCLK), <span class="hljs-comment">// Write clock input</span>
+<span class="hljs-variable">.WE</span>(WE) <span class="hljs-comment">// Write enable input</span>
+);
+<span class="hljs-comment">// &#x7ED3;&#x675F; RAM16X1S &#x6A21;&#x5757;&#x7684;&#x4F8B;&#x5316;&#x8FC7;&#x7A0B;</span>
+</code></pre>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;RAM16X1S &#x539F;&#x8BED;&#x662F; Xilinx &#x72EC;&#x6709;&#x7684;&#x4E00;&#x7C7B;&#x7ED3;&#x6784;&#xFF0C;&#x5728;&#x5C0F;&#x6570;&#x636E;&#x91CF;&#x5B58;&#x50A8;&#x65B9;&#x9762;&#x975E;&#x5E38;&#x8282;&#x7701;&#x8D44;&#x6E90;&#x3002;</p>
 <h2 id="sliceclb&#x7EC4;&#x4EF6;"><a name="sliceclb&#x7EC4;&#x4EF6;" class="plugin-anchor" href="#sliceclb&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>Slice/CLB&#x7EC4;&#x4EF6;</h2>
+<p>Slice/CLB &#x7EC4;&#x4EF6;&#x6DB5;&#x76D6;&#x4E86; Xilinx FPGA &#x4E2D;&#x6240;&#x6709;&#x7684;&#x903B;&#x8F91;&#x5355;&#x5143;&#xFF0C;&#x5305;&#x62EC;&#x5404;&#x79CD;&#x67E5;&#x627E;&#x8868;&#x3001;&#x590D;&#x7528;&#x5668;&#x4EE5;&#x53CA;&#x903B;&#x8F91;&#x64CD;&#x4F5C;&#x7B49; 21 &#x4E2A;&#x539F;&#x8BED;</p>
+<ul>
+<li>BUFCF &#x5FEB;&#x901F;&#x8FDE;&#x63A5;&#x7F13;&#x51B2;</li>
+<li>LUT1 &#x5E26;&#x901A;&#x7528;&#x8F93;&#x51FA;&#x7684;1&#x6BD4;&#x7279;&#x67E5;&#x627E;&#x8868;</li>
+<li>LUT2 &#x5E26;&#x901A;&#x7528;&#x8F93;&#x51FA;&#x7684;2&#x6BD4;&#x7279;&#x67E5;&#x627E;&#x8868; </li>
+<li>LUT3 &#x5E26;&#x901A;&#x7528;&#x8F93;&#x51FA;&#x7684;3&#x6BD4;&#x7279;&#x67E5;&#x627E;&#x8868;</li>
+<li>LUT4 &#x5E26;&#x901A;&#x7528;&#x8F93;&#x51FA;&#x7684;4&#x6BD4;&#x7279;&#x67E5;&#x627E;&#x8868;</li>
+<li>LUT1_D &#x5E26;&#x4E24;&#x4E2A;&#x8F93;&#x51FA;&#x7684;1&#x6BD4;&#x7279;&#x67E5;&#x627E;&#x8868;</li>
+<li>LUT2_D &#x5E26;&#x4E24;&#x4E2A;&#x8F93;&#x51FA;&#x7684;2&#x6BD4;&#x7279;&#x67E5;&#x627E;&#x8868;</li>
+<li>LUT3_D &#x5E26;&#x4E24;&#x4E2A;&#x8F93;&#x51FA;&#x7684;3&#x6BD4;&#x7279;&#x67E5;&#x627E;&#x8868;</li>
+<li>LUT4_D &#x5E26;&#x4E24;&#x4E2A;&#x8F93;&#x51FA;&#x7684;4&#x6BD4;&#x7279;&#x67E5;&#x627E;&#x8868;</li>
+<li>LUT1_L &#x5E26;&#x672C;&#x5730;&#x8F93;&#x51FA;&#x7684;1&#x6BD4;&#x7279;&#x67E5;&#x627E;&#x8868;</li>
+<li>LUT2_L &#x5E26;&#x672C;&#x5730;&#x8F93;&#x51FA;&#x7684;2&#x6BD4;&#x7279;&#x67E5;&#x627E;&#x8868;</li>
+<li>LUT3_L &#x5E26;&#x672C;&#x5730;&#x8F93;&#x51FA;&#x7684;3&#x6BD4;&#x7279;&#x67E5;&#x627E;&#x8868;</li>
+<li>LUT4_L &#x5E26;&#x672C;&#x5730;&#x8F93;&#x51FA;&#x7684;4&#x6BD4;&#x7279;&#x67E5;&#x627E;&#x8868;</li>
+<li>MULT_AND &#x7528;&#x4E8E;&#x4E58;&#x6CD5;&#x7684;&#x5FEB;&#x901F;&#x4E0E;&#x95E8;</li>
+<li>MUXCY &#x5E26;&#x6709;&#x8FDB;&#x4F4D;&#x548C;&#x901A;&#x7528;&#x8F93;&#x51FA;&#x7684;2&#x5230;1&#x590D;&#x7528;&#x5668;</li>
+<li>MUXCY_D &#x5E26;&#x6709;&#x8FDB;&#x4F4D;&#x548C;&#x53CC;&#x8F93;&#x51FA;&#x7684;2&#x5230;1&#x590D;&#x7528;&#x5668;</li>
+<li>MUXCY_L &#x5E26;&#x6709;&#x8FDB;&#x4F4D;&#x548C;&#x672C;&#x5730;&#x8F93;&#x51FA;&#x7684;2&#x5230;1&#x590D;&#x7528;&#x5668;</li>
+<li>MUXF5 &#x57FA;&#x4E8E;&#x67E5;&#x627E;&#x8868;&#x7684;2&#x5230;1&#x590D;&#x7528;&#x5668;&#xFF0C;&#x5E26;&#x901A;&#x7528;&#x8F93;&#x51FA;</li>
+<li>MUXF5_D &#x57FA;&#x4E8E;&#x67E5;&#x627E;&#x8868;&#x7684;2&#x5230;1&#x590D;&#x7528;&#x5668;&#xFF0C;&#x5E26;&#x53CC;&#x8F93;&#x51FA;</li>
+<li>MUXF5_L &#x57FA;&#x4E8E;&#x67E5;&#x627E;&#x8868;&#x7684;2&#x5230;1&#x590D;&#x7528;&#x5668;&#xFF0C;&#x5E26;&#x672C;&#x5730;&#x8F93;&#x51FA;</li>
+<li>MUXF6 &#x57FA;&#x4E8E;&#x67E5;&#x627E;&#x8868;&#x7684;2&#x5230;1&#x590D;&#x7528;&#x5668;&#xFF0C;&#x5E26;&#x901A;&#x7528;&#x8F93;&#x51FA;</li>
+<li>MUXF6_D &#x57FA;&#x4E8E;&#x67E5;&#x627E;&#x8868;&#x7684;2&#x5230;1&#x590D;&#x7528;&#x5668;&#xFF0C;&#x5E26;&#x672C;&#x5730;&#x8F93;&#x51FA;</li>
+<li>MUXF6_L &#x57FA;&#x4E8E;&#x67E5;&#x627E;&#x8868;&#x7684;2&#x5230;1&#x590D;&#x7528;&#x5668;&#xFF0C;&#x5E26;&#x672C;&#x5730;&#x8F93;&#x51FA;</li>
+<li>MUXF7 &#x57FA;&#x4E8E;&#x67E5;&#x627E;&#x8868;&#x7684;2&#x5230;1&#x590D;&#x7528;&#x5668;&#xFF0C;&#x5E26;&#x901A;&#x7528;&#x8F93;&#x51FA;</li>
+<li>MUXF7_D &#x57FA;&#x4E8E;&#x67E5;&#x627E;&#x8868;&#x7684;2&#x5230;1&#x590D;&#x7528;&#x5668;&#xFF0C;&#x5E26;&#x672C;&#x5730;&#x8F93;&#x51FA;</li>
+<li>MUXF7_L &#x57FA;&#x4E8E;&#x67E5;&#x627E;&#x8868;&#x7684;2&#x5230;1&#x590D;&#x7528;&#x5668;&#xFF0C;&#x5E26;&#x672C;&#x5730;&#x8F93;&#x51FA;</li>
+<li>MUXF8 &#x57FA;&#x4E8E;&#x67E5;&#x627E;&#x8868;&#x7684;2&#x5230;1&#x590D;&#x7528;&#x5668;&#xFF0C;&#x5E26;&#x901A;&#x7528;&#x8F93;&#x51FA;</li>
+<li>MUXF8_D &#x57FA;&#x4E8E;&#x67E5;&#x627E;&#x8868;&#x7684;2&#x5230;1&#x590D;&#x7528;&#x5668;&#xFF0C;&#x5E26;&#x672C;&#x5730;&#x8F93;&#x51FA;</li>
+<li>MUXF8_L &#x57FA;&#x4E8E;&#x67E5;&#x627E;&#x8868;&#x7684;2&#x5230;1&#x590D;&#x7528;&#x5668;&#xFF0C;&#x5E26;&#x672C;&#x5730;&#x8F93;&#x51FA;</li>
+<li>XORCY &#x5E26;&#x901A;&#x7528;&#x8F93;&#x51FA;&#x8FDB;&#x4F4D;&#x903B;&#x8F91;&#x7684;XOR</li>
+<li>XORCY_D &#x5E26;&#x4E24;&#x4E2A;&#x8F93;&#x51FA;&#x8FDB;&#x4F4D;&#x903B;&#x8F91;&#x7684;XOR</li>
+<li>XORCY_L &#x5E26;&#x672C;&#x5730;&#x8F93;&#x51FA;&#x8FDB;&#x4F4D;&#x903B;&#x8F91;&#x7684;XOR</li>
+</ul>
 <h2 id="g&#x6BD4;&#x7279;&#x6536;&#x53D1;&#x5668;&#x7EC4;&#x4EF6;"><a name="g&#x6BD4;&#x7279;&#x6536;&#x53D1;&#x5668;&#x7EC4;&#x4EF6;" class="plugin-anchor" href="#g&#x6BD4;&#x7279;&#x6536;&#x53D1;&#x5668;&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>G&#x6BD4;&#x7279;&#x6536;&#x53D1;&#x5668;&#x7EC4;&#x4EF6;</h2>
 <!-- Xilinx.md ends here -->
 <script type="text/javascript">var className='atoc';</script>
 
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> <a href="http://wuhongyi.cn/" target="_blank">&#xA9; Hongyi Wu</a> </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <i>updated:</i> 2018-11-04 16:51:34 </span> </footer>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> <a href="http://wuhongyi.cn/" target="_blank">&#xA9; Hongyi Wu</a> </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <i>updated:</i> 2018-11-04 20:57:21 </span> </footer>
                                 
                                 </section>
                             
@@ -602,7 +908,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Xilinx","level":"1.9.1","depth":2,"next":{"title":"Altera","level":"1.9.2","depth":2,"path":"Primitive/Altera.md","ref":"Primitive/Altera.md","articles":[]},"previous":{"title":"Primitive","level":"1.9","depth":1,"path":"Primitive/README.md","ref":"Primitive/README.md","articles":[{"title":"Xilinx","level":"1.9.1","depth":2,"path":"Primitive/Xilinx.md","ref":"Primitive/Xilinx.md","articles":[]},{"title":"Altera","level":"1.9.2","depth":2,"path":"Primitive/Altera.md","ref":"Primitive/Altera.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["search","sharing","fontsettings","livereload","highlight","github","-prism","ad","alerts","atoc","splitter","sitemap","image-captions","anchors","latex-codecogs","-katex","mermaid","ace","page-footer-ex","sectionx","mcqx","fbqx","spoiler","anchor-navigation","youtubex","redirect","expandable-chapters"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"latex-codecogs":{"type":"gif"},"spoiler":{},"ad":{"contentBottom":"","contentTop":""},"ace":{},"github":{"url":"https://github.com/wuhongyi"},"fbqx":{},"livereload":{},"page-footer-ex":{"copyright":"[© Hongyi Wu](http://wuhongyi.cn/)","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<i>updated:</i>"},"atoc":{"addClass":true,"className":"atoc"},"splitter":{},"search":{},"mermaid":{},"anchor-navigation":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"serif","size":2,"theme":"sepia"},"sectionx":{},"highlight":{},"sitemap":{"hostname":"http://wuhongyi.cn/"},"youtubex":{"embedDescription":{"de":"Eingebettetes Video:","default":"Embedded video:"}},"alerts":{},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"redirect":{},"mcqx":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{},"image-captions":{"variable_name":"_pictures"}},"theme":"default","author":"Hongyi Wu(吴鸿毅)","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[]},"title":"","gitbook":"*","description":"吴鸿毅笔记"},"file":{"path":"Primitive/Xilinx.md","mtime":"2018-11-04T08:51:34.730Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-11-04T09:03:18.907Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Xilinx","level":"1.9.1","depth":2,"next":{"title":"Altera","level":"1.9.2","depth":2,"path":"Primitive/Altera.md","ref":"Primitive/Altera.md","articles":[]},"previous":{"title":"Primitive","level":"1.9","depth":1,"path":"Primitive/README.md","ref":"Primitive/README.md","articles":[{"title":"Xilinx","level":"1.9.1","depth":2,"path":"Primitive/Xilinx.md","ref":"Primitive/Xilinx.md","articles":[]},{"title":"Altera","level":"1.9.2","depth":2,"path":"Primitive/Altera.md","ref":"Primitive/Altera.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["search","sharing","fontsettings","livereload","highlight","github","-prism","ad","alerts","atoc","splitter","sitemap","image-captions","anchors","latex-codecogs","-katex","mermaid","ace","page-footer-ex","sectionx","mcqx","fbqx","spoiler","anchor-navigation","youtubex","redirect","expandable-chapters"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"latex-codecogs":{"type":"gif"},"spoiler":{},"ad":{"contentBottom":"","contentTop":""},"ace":{},"github":{"url":"https://github.com/wuhongyi"},"fbqx":{},"livereload":{},"page-footer-ex":{"copyright":"[© Hongyi Wu](http://wuhongyi.cn/)","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<i>updated:</i>"},"atoc":{"addClass":true,"className":"atoc"},"splitter":{},"search":{},"mermaid":{},"anchor-navigation":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"serif","size":2,"theme":"sepia"},"sectionx":{},"highlight":{},"sitemap":{"hostname":"http://wuhongyi.cn/"},"youtubex":{"embedDescription":{"de":"Eingebettetes Video:","default":"Embedded video:"}},"alerts":{},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"redirect":{},"mcqx":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{},"image-captions":{"variable_name":"_pictures"}},"theme":"default","author":"Hongyi Wu(吴鸿毅)","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[]},"title":"","gitbook":"*","description":"吴鸿毅笔记"},"file":{"path":"Primitive/Xilinx.md","mtime":"2018-11-04T12:57:21.953Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-11-04T12:57:53.044Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
