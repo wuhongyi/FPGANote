@@ -18,6 +18,8 @@
 * [Verilog语法](VerilogGrammar/README.md)
 * [DSP](DSP/README.md)
 * [PCIE](PCIE/README.md)
+* [I2C](I2C/README.md)
+	- [驱动](I2C/driver.md)
 * [Primitive](Primitive/README.md)
 	* [Xilinx](Primitive/Xilinx.md)
 	* [Altera](Primitive/Altera.md)

@@ -18,6 +18,8 @@
 <url> <loc>http://wuhongyi.cn/VerilogGrammar/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://wuhongyi.cn/DSP/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://wuhongyi.cn/PCIE/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://wuhongyi.cn/I2C/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://wuhongyi.cn/I2C/driver.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://wuhongyi.cn/Primitive/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://wuhongyi.cn/Primitive/Xilinx.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://wuhongyi.cn/Primitive/Altera.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
